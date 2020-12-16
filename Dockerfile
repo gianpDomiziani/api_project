@@ -9,4 +9,3 @@ RUN pip install -U flask
 WORKDIR /home/app
 
 CMD [ "python", "app.py" ]
-

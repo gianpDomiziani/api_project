@@ -13,7 +13,7 @@ class Page:
         self._page = {"id": self._id, "title": self._title, "header": self._header, 
                       "author": self._author, "body": self._body}
     
-    def build_json_response(self, http_status: int, api_method: str) -> str:
+    def build_json_response(self, http_status=200, api_method=""):
 
         json_body = json.dumps(self._page["body"], indent=4, sort_keys=False)
         ans = {
