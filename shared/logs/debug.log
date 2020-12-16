@@ -116,3 +116,237 @@
 9788 - 2020-12-16 13:25:19,971 - WARNING  - werkzeug     -  * Debugger is active!
 9788 - 2020-12-16 13:25:19,977 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
 9788 - 2020-12-16 13:25:19,997 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+10364 - 2020-12-16 15:27:45,995 - INFO     - werkzeug     -  * Restarting with stat
+13212 - 2020-12-16 15:27:46,344 - WARNING  - werkzeug     -  * Debugger is active!
+13212 - 2020-12-16 15:27:46,350 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+13212 - 2020-12-16 15:27:46,372 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+13212 - 2020-12-16 15:28:04,840 - INFO     - core_api     - API - get_locals called ...
+13212 - 2020-12-16 15:28:05,172 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:28:05] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+13212 - 2020-12-16 15:28:13,270 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:28:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+13212 - 2020-12-16 15:28:14,935 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:28:14] "[37mGET /api/local/12 HTTP/1.1[0m" 200 -
+13212 - 2020-12-16 15:29:35,810 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+10364 - 2020-12-16 15:29:35,845 - INFO     - werkzeug     -  * Restarting with stat
+11464 - 2020-12-16 15:29:36,185 - WARNING  - werkzeug     -  * Debugger is active!
+11464 - 2020-12-16 15:29:36,189 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+11464 - 2020-12-16 15:29:36,216 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+11464 - 2020-12-16 15:29:44,247 - INFO     - core_api     - API.get_local called ...
+11464 - 2020-12-16 15:29:44,381 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:29:44] "[37mGET /api/local/1 HTTP/1.1[0m" 200 -
+11464 - 2020-12-16 15:29:48,983 - INFO     - core_api     - API.get_locals called ...
+11464 - 2020-12-16 15:29:49,225 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:29:49] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+11464 - 2020-12-16 15:30:15,478 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:30:15] "[33mGET /api/local/a HTTP/1.1[0m" 404 -
+11464 - 2020-12-16 15:33:12,038 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+10364 - 2020-12-16 15:33:12,079 - INFO     - werkzeug     -  * Restarting with stat
+8724 - 2020-12-16 15:33:12,457 - WARNING  - werkzeug     -  * Debugger is active!
+8724 - 2020-12-16 15:33:12,464 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+8724 - 2020-12-16 15:33:12,496 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+8724 - 2020-12-16 15:33:24,566 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:33:24] "[33mGET /api/local/a HTTP/1.1[0m" 404 -
+8724 - 2020-12-16 15:33:29,311 - INFO     - core_api     - API.get_local called ...
+8724 - 2020-12-16 15:33:29,376 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:33:29] "[37mGET /api/local/12 HTTP/1.1[0m" 200 -
+8724 - 2020-12-16 15:33:36,410 - INFO     - core_api     - API.get_locals called ...
+8724 - 2020-12-16 15:33:36,648 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:33:36] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+8724 - 2020-12-16 15:33:45,471 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:33:45] "[33mGET /api/local/a HTTP/1.1[0m" 404 -
+8724 - 2020-12-16 15:35:12,241 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+10364 - 2020-12-16 15:35:12,273 - INFO     - werkzeug     -  * Restarting with stat
+14600 - 2020-12-16 15:35:12,625 - WARNING  - werkzeug     -  * Debugger is active!
+14600 - 2020-12-16 15:35:12,629 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+14600 - 2020-12-16 15:35:12,648 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+14600 - 2020-12-16 15:35:34,063 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:34] "[33mGET /api/local/a HTTP/1.1[0m" 404 -
+14600 - 2020-12-16 15:35:37,349 - INFO     - core_api     - API.get_local called ...
+14600 - 2020-12-16 15:35:37,422 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:37] "[37mGET /api/local/89 HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:45,294 - INFO     - core_api     - API.get_local called ...
+14600 - 2020-12-16 15:35:45,369 - ERROR    - core_api     - API.get_local error -> list index out of range
+14600 - 2020-12-16 15:35:45,410 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:45] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+14600 - 2020-12-16 15:35:46,456 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:46] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:46,464 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:46] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:46,479 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:46] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:46,918 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:46] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:46,918 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:46] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:35:47,146 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:35:47] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+14600 - 2020-12-16 15:36:19,166 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+10364 - 2020-12-16 15:36:19,338 - INFO     - werkzeug     -  * Restarting with stat
+7360 - 2020-12-16 15:36:19,763 - WARNING  - werkzeug     -  * Debugger is active!
+7360 - 2020-12-16 15:36:19,769 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7360 - 2020-12-16 15:36:19,794 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7360 - 2020-12-16 15:36:24,887 - INFO     - core_api     - API.get_local called ...
+7360 - 2020-12-16 15:36:25,006 - ERROR    - core_api     - API.get_local error -> list index out of range
+7360 - 2020-12-16 15:36:25,034 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:25] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+7360 - 2020-12-16 15:36:25,479 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7360 - 2020-12-16 15:36:25,599 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7360 - 2020-12-16 15:36:25,710 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7360 - 2020-12-16 15:36:26,061 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:26] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7360 - 2020-12-16 15:36:26,144 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:36:26] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7360 - 2020-12-16 15:37:35,630 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\flask_utils.py', reloading
+10364 - 2020-12-16 15:37:35,683 - INFO     - werkzeug     -  * Restarting with stat
+16192 - 2020-12-16 15:37:36,034 - WARNING  - werkzeug     -  * Debugger is active!
+16192 - 2020-12-16 15:37:36,043 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+16192 - 2020-12-16 15:37:36,068 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+16192 - 2020-12-16 15:37:39,916 - INFO     - core_api     - API.get_local called ...
+16192 - 2020-12-16 15:37:40,035 - ERROR    - core_api     - API.get_local error -> list index out of range
+16192 - 2020-12-16 15:37:40,080 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:40] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+16192 - 2020-12-16 15:37:40,669 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:40] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+16192 - 2020-12-16 15:37:40,695 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:40] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+16192 - 2020-12-16 15:37:40,814 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:40] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+16192 - 2020-12-16 15:37:41,162 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:41] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+16192 - 2020-12-16 15:37:41,171 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:37:41] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+16192 - 2020-12-16 15:39:09,003 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\flask_utils.py', reloading
+10364 - 2020-12-16 15:39:09,042 - INFO     - werkzeug     -  * Restarting with stat
+4580 - 2020-12-16 15:39:09,414 - WARNING  - werkzeug     -  * Debugger is active!
+4580 - 2020-12-16 15:39:09,420 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+4580 - 2020-12-16 15:39:09,449 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9632 - 2020-12-16 15:42:58,157 - INFO     - werkzeug     -  * Restarting with stat
+6408 - 2020-12-16 15:42:58,620 - WARNING  - werkzeug     -  * Debugger is active!
+6408 - 2020-12-16 15:42:58,623 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+6408 - 2020-12-16 15:42:58,642 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+6408 - 2020-12-16 15:43:05,280 - INFO     - core_api     - API.get_local called ...
+6408 - 2020-12-16 15:43:05,396 - ERROR    - core_api     - API.get_local error -> list index out of range
+6408 - 2020-12-16 15:43:05,425 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:05] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+6408 - 2020-12-16 15:43:05,917 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:05] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+6408 - 2020-12-16 15:43:05,917 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:05] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+6408 - 2020-12-16 15:43:06,075 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:06] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+6408 - 2020-12-16 15:43:06,422 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:06] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+6408 - 2020-12-16 15:43:06,426 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:06] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+6408 - 2020-12-16 15:43:20,938 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:43:20,980 - INFO     - werkzeug     -  * Restarting with stat
+9772 - 2020-12-16 15:43:21,365 - WARNING  - werkzeug     -  * Debugger is active!
+9772 - 2020-12-16 15:43:21,375 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9772 - 2020-12-16 15:43:21,415 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9772 - 2020-12-16 15:43:24,640 - INFO     - core_api     - API.get_local called ...
+9772 - 2020-12-16 15:43:24,809 - ERROR    - core_api     - API.get_local error -> list index out of range
+9772 - 2020-12-16 15:43:24,859 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:24] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+9772 - 2020-12-16 15:43:25,495 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+9772 - 2020-12-16 15:43:25,496 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+9772 - 2020-12-16 15:43:25,619 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+9772 - 2020-12-16 15:43:25,989 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+9772 - 2020-12-16 15:43:25,991 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:43:25] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+9772 - 2020-12-16 15:43:57,974 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:43:58,018 - INFO     - werkzeug     -  * Restarting with stat
+9096 - 2020-12-16 15:43:58,371 - WARNING  - werkzeug     -  * Debugger is active!
+9096 - 2020-12-16 15:43:58,378 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9096 - 2020-12-16 15:43:58,403 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9096 - 2020-12-16 15:44:02,429 - INFO     - core_api     - API.get_local called ...
+9096 - 2020-12-16 15:44:02,545 - ERROR    - core_api     - API.get_local error -> list index out of range
+9096 - 2020-12-16 15:44:02,555 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:44:02] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+9096 - 2020-12-16 15:44:39,980 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:44:40,019 - INFO     - werkzeug     -  * Restarting with stat
+11840 - 2020-12-16 15:44:40,400 - WARNING  - werkzeug     -  * Debugger is active!
+11840 - 2020-12-16 15:44:40,405 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+11840 - 2020-12-16 15:44:40,437 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+11840 - 2020-12-16 15:44:43,669 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:44:43,727 - INFO     - werkzeug     -  * Restarting with stat
+2316 - 2020-12-16 15:44:44,076 - WARNING  - werkzeug     -  * Debugger is active!
+2316 - 2020-12-16 15:44:44,084 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+2316 - 2020-12-16 15:44:44,107 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2316 - 2020-12-16 15:44:47,528 - INFO     - core_api     - API.get_local called ...
+2316 - 2020-12-16 15:44:47,611 - ERROR    - core_api     - API.get_local error -> list index out of range
+2316 - 2020-12-16 15:44:47,620 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:44:47] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+2316 - 2020-12-16 15:44:51,992 - INFO     - core_api     - API.get_local called ...
+2316 - 2020-12-16 15:44:52,062 - ERROR    - core_api     - API.get_local error -> list index out of range
+2316 - 2020-12-16 15:44:52,074 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:44:52] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+2316 - 2020-12-16 15:45:15,104 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:45:15,141 - INFO     - werkzeug     -  * Restarting with stat
+7832 - 2020-12-16 15:45:15,495 - WARNING  - werkzeug     -  * Debugger is active!
+7832 - 2020-12-16 15:45:15,503 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7832 - 2020-12-16 15:45:15,519 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7832 - 2020-12-16 15:45:23,363 - INFO     - core_api     - API.get_local called ...
+7832 - 2020-12-16 15:45:23,491 - ERROR    - core_api     - API.get_local error -> list index out of range
+7832 - 2020-12-16 15:45:23,501 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:45:23] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+7832 - 2020-12-16 15:45:31,977 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+9632 - 2020-12-16 15:45:32,014 - INFO     - werkzeug     -  * Restarting with stat
+12508 - 2020-12-16 15:45:32,391 - WARNING  - werkzeug     -  * Debugger is active!
+12508 - 2020-12-16 15:45:32,393 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+12508 - 2020-12-16 15:45:32,414 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+12508 - 2020-12-16 15:45:35,374 - INFO     - core_api     - API.get_local called ...
+12508 - 2020-12-16 15:45:35,498 - ERROR    - core_api     - API.get_local error -> list index out of range
+12508 - 2020-12-16 15:45:35,517 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:45:35] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+5192 - 2020-12-16 15:46:43,316 - INFO     - werkzeug     -  * Restarting with stat
+15020 - 2020-12-16 15:46:43,627 - WARNING  - werkzeug     -  * Debugger is active!
+15020 - 2020-12-16 15:46:43,633 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15020 - 2020-12-16 15:46:43,651 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15020 - 2020-12-16 15:46:48,155 - INFO     - core_api     - API.get_local called ...
+15020 - 2020-12-16 15:46:48,282 - ERROR    - core_api     - API.get_local error -> list index out of range
+15020 - 2020-12-16 15:46:48,295 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:46:48] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+15020 - 2020-12-16 15:47:33,191 - INFO     - core_api     - API.get_local called ...
+15020 - 2020-12-16 15:47:33,234 - ERROR    - core_api     - API.get_local error -> list index out of range
+15020 - 2020-12-16 15:47:33,239 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:47:33] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+15020 - 2020-12-16 15:48:10,712 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:48:10,772 - INFO     - werkzeug     -  * Restarting with stat
+16320 - 2020-12-16 15:48:11,152 - WARNING  - werkzeug     -  * Debugger is active!
+16320 - 2020-12-16 15:48:11,162 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+16320 - 2020-12-16 15:48:11,185 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+16320 - 2020-12-16 15:48:14,405 - INFO     - core_api     - API.get_local called ...
+16320 - 2020-12-16 15:48:14,521 - ERROR    - core_api     - API.get_local error -> list index out of range
+16320 - 2020-12-16 15:48:14,570 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:14] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+16320 - 2020-12-16 15:48:15,268 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:15,271 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:15,385 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:15,741 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:15,765 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:15,986 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:48:15] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+16320 - 2020-12-16 15:48:59,512 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:48:59,553 - INFO     - werkzeug     -  * Restarting with stat
+7436 - 2020-12-16 15:48:59,918 - WARNING  - werkzeug     -  * Debugger is active!
+7436 - 2020-12-16 15:48:59,925 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7436 - 2020-12-16 15:48:59,954 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7436 - 2020-12-16 15:49:02,978 - INFO     - core_api     - API.get_local called ...
+7436 - 2020-12-16 15:49:03,093 - ERROR    - core_api     - API.get_local error -> list index out of range
+7436 - 2020-12-16 15:49:03,138 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:03] "[35m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 500 -
+7436 - 2020-12-16 15:49:03,836 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:03] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7436 - 2020-12-16 15:49:03,837 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:03] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7436 - 2020-12-16 15:49:03,944 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:03] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7436 - 2020-12-16 15:49:04,315 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:04] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7436 - 2020-12-16 15:49:04,359 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:49:04] "[37mGET /api/local/82918912891182?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7436 - 2020-12-16 15:50:17,781 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:50:17,824 - INFO     - werkzeug     -  * Restarting with stat
+7872 - 2020-12-16 15:50:18,234 - WARNING  - werkzeug     -  * Debugger is active!
+7872 - 2020-12-16 15:50:18,239 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7872 - 2020-12-16 15:50:18,276 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7872 - 2020-12-16 15:50:21,417 - INFO     - core_api     - API.get_local called ...
+7872 - 2020-12-16 15:50:21,517 - ERROR    - core_api     - API.get_local error -> list index out of range
+7872 - 2020-12-16 15:50:21,521 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:50:21] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+7872 - 2020-12-16 15:50:55,561 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:50:55,597 - INFO     - werkzeug     -  * Restarting with stat
+15500 - 2020-12-16 15:50:55,974 - WARNING  - werkzeug     -  * Debugger is active!
+15500 - 2020-12-16 15:50:55,983 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15500 - 2020-12-16 15:50:56,029 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15500 - 2020-12-16 15:50:58,972 - INFO     - core_api     - API.get_local called ...
+15500 - 2020-12-16 15:50:59,082 - ERROR    - core_api     - API.get_local error -> list index out of range
+15500 - 2020-12-16 15:50:59,082 - DEBUG    - core_api     - e
+15500 - 2020-12-16 15:50:59,090 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:50:59] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+15500 - 2020-12-16 15:53:27,323 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:53:27,355 - INFO     - werkzeug     -  * Restarting with stat
+13444 - 2020-12-16 15:53:27,840 - WARNING  - werkzeug     -  * Debugger is active!
+13444 - 2020-12-16 15:53:27,847 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+13444 - 2020-12-16 15:53:27,864 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+13444 - 2020-12-16 15:53:31,647 - INFO     - core_api     - API.get_local called ...
+13444 - 2020-12-16 15:53:31,759 - ERROR    - core_api     - API.get_local error -> list index out of range
+13444 - 2020-12-16 15:53:31,759 - DEBUG    - core_api     - list index out of range
+13444 - 2020-12-16 15:53:31,759 - DEBUG    - core_api     - e
+13444 - 2020-12-16 15:53:31,767 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:53:31] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+13444 - 2020-12-16 15:53:57,368 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:53:57,406 - INFO     - werkzeug     -  * Restarting with stat
+4104 - 2020-12-16 15:53:57,787 - WARNING  - werkzeug     -  * Debugger is active!
+4104 - 2020-12-16 15:53:57,792 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+4104 - 2020-12-16 15:53:57,816 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+4104 - 2020-12-16 15:54:01,740 - INFO     - core_api     - API.get_local called ...
+4104 - 2020-12-16 15:54:01,846 - ERROR    - core_api     - API.get_local error -> list index out of range
+4104 - 2020-12-16 15:54:01,848 - DEBUG    - core_api     - list index out of range
+4104 - 2020-12-16 15:54:01,848 - DEBUG    - core_api     - e
+4104 - 2020-12-16 15:54:01,854 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:54:01] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+4104 - 2020-12-16 15:54:38,595 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:54:38,630 - INFO     - werkzeug     -  * Restarting with stat
+15344 - 2020-12-16 15:54:39,010 - WARNING  - werkzeug     -  * Debugger is active!
+15344 - 2020-12-16 15:54:39,013 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15344 - 2020-12-16 15:54:39,035 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15344 - 2020-12-16 15:54:44,155 - INFO     - core_api     - API.get_local called ...
+15344 - 2020-12-16 15:54:44,268 - ERROR    - core_api     - API.get_local error -> list index out of range
+15344 - 2020-12-16 15:54:44,281 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 15:54:44] "[31m[1mGET /api/local/82918912891182 HTTP/1.1[0m" 400 -
+15344 - 2020-12-16 15:54:54,678 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:54:54,734 - INFO     - werkzeug     -  * Restarting with stat
+676 - 2020-12-16 15:54:55,103 - WARNING  - werkzeug     -  * Debugger is active!
+676 - 2020-12-16 15:54:55,113 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+676 - 2020-12-16 15:54:55,129 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+676 - 2020-12-16 15:55:14,795 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+5192 - 2020-12-16 15:55:14,830 - INFO     - werkzeug     -  * Restarting with stat
+9604 - 2020-12-16 15:55:15,209 - WARNING  - werkzeug     -  * Debugger is active!
+9604 - 2020-12-16 15:55:15,217 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9604 - 2020-12-16 15:55:15,250 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
