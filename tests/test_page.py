@@ -1,7 +1,7 @@
 import pytest
 
 from page import Page
-pgs_0 = Page(id=1, title='Mars', header='Can Mars hospit life?', author='Pino', body='Yes.')
+pgs_0 = Page(id=1, title='Mars', header='Can Mars hold life?', author='Pino', body='Yes.')
 pgs_1 = Page()
 
 class TestAPI:
@@ -15,6 +15,8 @@ class TestAPI:
         assert len(pgs_0._page.keys()) == 5
         assert len(pgs_1._page.keys()) == 5
         assert type(pgs_0._page['body']) == str
+        assert type(pgs_0._page) == dict
+        assert type(pgs_1._page) == dict
     
     @staticmethod
     def test_response():
