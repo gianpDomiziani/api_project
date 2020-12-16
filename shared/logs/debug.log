@@ -1,0 +1,118 @@
+3964 - 2020-12-16 13:11:30,491 - INFO     - werkzeug     -  * Restarting with stat
+15172 - 2020-12-16 13:11:30,778 - WARNING  - werkzeug     -  * Debugger is active!
+15172 - 2020-12-16 13:11:30,784 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15172 - 2020-12-16 13:11:30,804 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15172 - 2020-12-16 13:12:45,351 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\app.py', reloading
+3964 - 2020-12-16 13:12:45,392 - INFO     - werkzeug     -  * Restarting with stat
+12028 - 2020-12-16 13:12:45,735 - WARNING  - werkzeug     -  * Debugger is active!
+12028 - 2020-12-16 13:12:45,743 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+12028 - 2020-12-16 13:12:45,766 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+12028 - 2020-12-16 13:13:00,239 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:13:00] "[33mGET /api HTTP/1.1[0m" 404 -
+12028 - 2020-12-16 13:13:00,321 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:13:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+12028 - 2020-12-16 13:13:03,626 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:13:03] "[33mGET /api/ HTTP/1.1[0m" 404 -
+12028 - 2020-12-16 13:13:05,201 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:13:05] "[33mGET /api/ HTTP/1.1[0m" 404 -
+12028 - 2020-12-16 13:14:07,560 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:07] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+12028 - 2020-12-16 13:14:07,897 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:07] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:14:07,916 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:07] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:14:08,013 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:08] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:14:08,471 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:08] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:14:08,473 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:08] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:14:08,703 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:14:08] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+12028 - 2020-12-16 13:15:10,891 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:15:10,938 - INFO     - werkzeug     -  * Restarting with stat
+2156 - 2020-12-16 13:15:11,265 - WARNING  - werkzeug     -  * Debugger is active!
+2156 - 2020-12-16 13:15:11,278 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+2156 - 2020-12-16 13:15:11,302 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2156 - 2020-12-16 13:15:15,434 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:15] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+2156 - 2020-12-16 13:15:50,523 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:15:50,560 - INFO     - werkzeug     -  * Restarting with stat
+4408 - 2020-12-16 13:15:50,900 - WARNING  - werkzeug     -  * Debugger is active!
+4408 - 2020-12-16 13:15:50,918 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+4408 - 2020-12-16 13:15:50,942 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+4408 - 2020-12-16 13:15:54,678 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:54] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+4408 - 2020-12-16 13:15:54,974 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:54] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:15:55,025 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:55] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:15:55,091 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:55] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:15:55,435 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:55] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:15:55,466 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:55] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:15:55,701 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:15:55] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+4408 - 2020-12-16 13:16:54,465 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:16:54,513 - INFO     - werkzeug     -  * Restarting with stat
+7488 - 2020-12-16 13:16:54,836 - WARNING  - werkzeug     -  * Debugger is active!
+7488 - 2020-12-16 13:16:54,845 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7488 - 2020-12-16 13:16:54,869 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7488 - 2020-12-16 13:16:59,387 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:16:59] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+7488 - 2020-12-16 13:16:59,595 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:16:59] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7488 - 2020-12-16 13:16:59,598 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:16:59] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7488 - 2020-12-16 13:16:59,721 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:16:59] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7488 - 2020-12-16 13:17:00,054 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:00] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7488 - 2020-12-16 13:17:00,076 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:00] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7488 - 2020-12-16 13:17:12,835 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:17:12,879 - INFO     - werkzeug     -  * Restarting with stat
+9760 - 2020-12-16 13:17:13,313 - WARNING  - werkzeug     -  * Debugger is active!
+9760 - 2020-12-16 13:17:13,322 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9760 - 2020-12-16 13:17:13,342 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9760 - 2020-12-16 13:17:16,431 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:16] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+9760 - 2020-12-16 13:17:16,720 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:16] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+9760 - 2020-12-16 13:17:16,780 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:16] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+9760 - 2020-12-16 13:17:16,860 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:16] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+9760 - 2020-12-16 13:17:17,205 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:17] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+9760 - 2020-12-16 13:17:17,258 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:17:17] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+9760 - 2020-12-16 13:18:07,224 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:18:07,275 - INFO     - werkzeug     -  * Restarting with stat
+12452 - 2020-12-16 13:18:07,625 - WARNING  - werkzeug     -  * Debugger is active!
+12452 - 2020-12-16 13:18:07,633 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+12452 - 2020-12-16 13:18:07,651 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+12452 - 2020-12-16 13:18:12,540 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:12] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+12452 - 2020-12-16 13:18:12,836 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:12] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+12452 - 2020-12-16 13:18:12,885 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:12] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+12452 - 2020-12-16 13:18:12,962 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:12] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+12452 - 2020-12-16 13:18:13,317 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:13] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+12452 - 2020-12-16 13:18:13,318 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:13] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+12452 - 2020-12-16 13:18:23,447 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:18:23,486 - INFO     - werkzeug     -  * Restarting with stat
+7868 - 2020-12-16 13:18:23,906 - WARNING  - werkzeug     -  * Debugger is active!
+7868 - 2020-12-16 13:18:23,913 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7868 - 2020-12-16 13:18:23,931 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7868 - 2020-12-16 13:18:26,415 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:26] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+7868 - 2020-12-16 13:18:26,705 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:26] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7868 - 2020-12-16 13:18:26,747 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:26] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7868 - 2020-12-16 13:18:26,837 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:26] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7868 - 2020-12-16 13:18:27,170 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:27] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7868 - 2020-12-16 13:18:27,215 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:18:27] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7868 - 2020-12-16 13:20:16,618 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:20:16,653 - INFO     - werkzeug     -  * Restarting with stat
+6652 - 2020-12-16 13:20:16,970 - WARNING  - werkzeug     -  * Debugger is active!
+6652 - 2020-12-16 13:20:16,983 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+6652 - 2020-12-16 13:20:17,010 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+6652 - 2020-12-16 13:20:30,156 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:20:30] "[37mGET /api/local/10 HTTP/1.1[0m" 200 -
+6652 - 2020-12-16 13:22:02,638 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:22:02,683 - INFO     - werkzeug     -  * Restarting with stat
+8272 - 2020-12-16 13:22:03,075 - WARNING  - werkzeug     -  * Debugger is active!
+8272 - 2020-12-16 13:22:03,080 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+8272 - 2020-12-16 13:22:03,098 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+8272 - 2020-12-16 13:22:09,035 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:22:09] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+8272 - 2020-12-16 13:22:13,155 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:22:13] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+8272 - 2020-12-16 13:23:17,134 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:23:17,183 - INFO     - werkzeug     -  * Restarting with stat
+4896 - 2020-12-16 13:23:17,553 - WARNING  - werkzeug     -  * Debugger is active!
+4896 - 2020-12-16 13:23:17,559 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+4896 - 2020-12-16 13:23:17,587 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+4896 - 2020-12-16 13:23:21,042 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[35m[1mGET /api/locals HTTP/1.1[0m" 500 -
+4896 - 2020-12-16 13:23:21,325 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:23:21,381 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:23:21,445 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:23:21,802 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:23:21,818 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:21] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:23:22,040 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:23:22] "[37mGET /api/locals?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+4896 - 2020-12-16 13:25:00,053 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:25:00,090 - INFO     - werkzeug     -  * Restarting with stat
+2756 - 2020-12-16 13:25:00,449 - WARNING  - werkzeug     -  * Debugger is active!
+2756 - 2020-12-16 13:25:00,457 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+2756 - 2020-12-16 13:25:00,482 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2756 - 2020-12-16 13:25:05,915 - INFO     - werkzeug     - 127.0.0.1 - - [16/Dec/2020 13:25:05] "[37mGET /api/locals HTTP/1.1[0m" 200 -
+2756 - 2020-12-16 13:25:19,526 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+3964 - 2020-12-16 13:25:19,563 - INFO     - werkzeug     -  * Restarting with stat
+9788 - 2020-12-16 13:25:19,971 - WARNING  - werkzeug     -  * Debugger is active!
+9788 - 2020-12-16 13:25:19,977 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9788 - 2020-12-16 13:25:19,997 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
