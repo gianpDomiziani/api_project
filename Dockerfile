@@ -1,12 +1,12 @@
 FROM python:3.8
 
-WORKDIR /app
+WORKDIR /home
 
-ADD . /app
+ADD . /home
 
 RUN pip install -U flask
 
-WORKDIR /app/app
+WORKDIR /home/app
 
 CMD [ "python", "app.py" ]
 
