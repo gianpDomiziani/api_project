@@ -1,6 +1,13 @@
-import pytest
+import os
+import sys
+sys.path.append(
+    os.path.abspath(
+        os.path.join(os.path.dirname(__file__), os.pardir)
+    )
+)
 
-from page import Page, ServePages
+import pytest
+from models.page import Page, ServePages
 pgs_0 = Page(id=1, title='Mars', header='Can Mars hold life?', author='Pino', body='Yes.')
 pgs_1 = Page()
 
