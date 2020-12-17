@@ -17,19 +17,3 @@ class TestAPI:
         assert type(pgs_0._page['body']) == str
         assert type(pgs_0._page) == dict
         assert type(pgs_1._page) == dict
-    
-    @staticmethod
-    def test_response():
-        json_resp = pgs_0.build_json_response()
-        json_resp_1 = pgs_1.build_json_response()
-        assert type(json_resp) == str
-        assert len(json_resp) > 0
-        assert type(json_resp_1) == str
-        assert len(json_resp_1) > 0
-
-
-
-
-
-
-
