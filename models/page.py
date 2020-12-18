@@ -1,44 +1,52 @@
+from dataclasses import dataclass
 
 
+@dataclass
 class Page:
     """Simple resource class """
 
-    def __init__(self, id=None, title="", header="", author="", body=""):
+    id: int
+    title: str = ""
+    header: str = ""
+    author: str = ""
+    body: str = ""
 
-        self._id = id
-        self._title = title
-        self._header = header
-        self._author = author
-        self._body = body
-        self._page = {"id": self._id, "title": self._title, "header": self._header, 
-                      "author": self._author, "body": self._body}
-        
+    @property
+    def page(self):
+        return self.__dict__
 
 
+@dataclass
 class ServePages:
     """ServePages is a service layer interface for applying our application logic to the Pages resources. 
     It follows the REST architectural style, however remaining totally independent from the HTTP protocol. """
 
-    def __init__(self):
-        self._pages = dict()
+    @property
+    def pages(self):
+        return self.__dict__
 
+    @property
+    def totPages(self) -> int:
+        return len(self.pages.keys())
+
+    
     # POST
-    def charge(self, pgs: dict)-> None:
-        self._pages[pgs['id']] = pgs  # save a page by its ID
-        
+    def charge(self, pgs: dict) -> None:
+        self.pages[pgs['id']] = pgs  # save a page by its ID
+
     # GET
     def get(self, id: int):
 
         try:
-            return self._pages[id]
+            return self.pages[id]
         except KeyError:
             return None
-    
+
     # DELETE
     def delete(self, id: int):
-        
+
         try:
-            _ = self._pages.pop(id)
+            _ = self.pages.pop(id)
             return True
         except KeyError as e:
             print(e)
@@ -48,17 +56,10 @@ class ServePages:
     def modify(self, id: int, field: str, content=''):
 
         try:
-            self._pages[id][field] = content
+            self.pages[id][field] = content
             return True
         except KeyError as e:
             print(e)
             return False
-
-
-    
-
-        
-        
-
 
 
