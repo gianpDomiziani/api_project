@@ -11,7 +11,7 @@ class AbstractRepository(abc.ABC):
     def get(self, id: int, ServePages) -> dict:
         raise NotImplementedError
 
-class SQLAlchemyRepository(AbstractRepository):
+class SqlAlchemyRepository(AbstractRepository):
 
     def __init__(self, session):
         self.session = session

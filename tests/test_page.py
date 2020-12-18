@@ -9,6 +9,7 @@ sys.path.append(
 )
 
 from models.page import Page, ServePages
+from repository import repository
 
 
 pgs_0 = Page(id=0, title='Mars', header='Can Mars hold life?',
@@ -63,3 +64,20 @@ class TestAPI:
         assert servPages.modify(id='Not an ID', field='title') is False
         servPages.charge(pgs_1.page)
         assert servPages.modify(pgs_1.page['id'], 'title', 'Modified')
+    
+
+    # === Abstract Repository Tests ===
+
+    @staticmethod
+    def test_repository_can_add_pages(session):
+
+        ServePages.charge(pgs_0.page)
+        repo = repository.SqlAlchemyRepository(session)
+        page = ServePages.get(pgs_0.id)
+        repo.add(page)
+        session.commit()
+
+        row = list(session.execute(
+            ""
+        ))
+
