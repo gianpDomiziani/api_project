@@ -1,5 +1,5 @@
 import abc
-from models.page import ServePages
+from services.pageService import ServePages
 
 class AbstractRepository(abc.ABC):
 

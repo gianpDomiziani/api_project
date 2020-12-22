@@ -8,8 +8,9 @@ sys.path.append(
     )
 )
 
-from models.page import Page, ServePages
-from repository import repository
+from models.page import Page
+from services.pageService import ServePages
+from repositories import repository
 
 
 pgs_0 = Page(id=0, title='Mars', header='Can Mars hold life?',
