@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Page:
     """Simple resource class """
 
-    id: int
+    pageid: int
     title: str = ""
     header: str = ""
     author: str = ""

@@ -350,3 +350,184 @@
 9604 - 2020-12-16 15:55:15,209 - WARNING  - werkzeug     -  * Debugger is active!
 9604 - 2020-12-16 15:55:15,217 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
 9604 - 2020-12-16 15:55:15,250 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+11664 - 2020-12-22 15:34:43,680 - INFO     - werkzeug     -  * Restarting with stat
+17144 - 2020-12-22 15:34:44,003 - WARNING  - werkzeug     -  * Debugger is active!
+17144 - 2020-12-22 15:34:44,012 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+17144 - 2020-12-22 15:34:44,034 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+17144 - 2020-12-22 15:34:58,171 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:34:58] "[33mGET / HTTP/1.1[0m" 404 -
+17144 - 2020-12-22 15:34:58,311 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:34:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+17144 - 2020-12-22 15:35:05,306 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:05] "[33mGET /pages HTTP/1.1[0m" 404 -
+17144 - 2020-12-22 15:35:21,177 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:21] "[37mGET /api/pages HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:29,820 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:29] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+17144 - 2020-12-22 15:35:30,685 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:30] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:30,686 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:30] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:30,687 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:30] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:31,109 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:31] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:31,132 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:31] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:31,352 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:35:31] "[37mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+17144 - 2020-12-22 15:35:55,194 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 15:35:55,244 - INFO     - werkzeug     -  * Restarting with stat
+2212 - 2020-12-22 15:35:55,612 - WARNING  - werkzeug     -  * Debugger is active!
+2212 - 2020-12-22 15:35:55,621 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+2212 - 2020-12-22 15:35:55,636 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2212 - 2020-12-22 15:36:02,785 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 15:36:02] "[37mGET /api/pages HTTP/1.1[0m" 200 -
+2212 - 2020-12-22 16:05:46,262 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:05:46,308 - INFO     - werkzeug     -  * Restarting with stat
+15496 - 2020-12-22 16:05:46,744 - WARNING  - werkzeug     -  * Debugger is active!
+15496 - 2020-12-22 16:05:46,753 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15496 - 2020-12-22 16:05:46,769 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15496 - 2020-12-22 16:06:32,187 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:06:32,228 - INFO     - werkzeug     -  * Restarting with stat
+9668 - 2020-12-22 16:06:32,848 - WARNING  - werkzeug     -  * Debugger is active!
+9668 - 2020-12-22 16:06:32,855 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9668 - 2020-12-22 16:06:32,873 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9668 - 2020-12-22 16:27:19,291 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:27:19,344 - INFO     - werkzeug     -  * Restarting with stat
+14840 - 2020-12-22 16:27:19,882 - WARNING  - werkzeug     -  * Debugger is active!
+14840 - 2020-12-22 16:27:19,889 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+14840 - 2020-12-22 16:27:19,904 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+14840 - 2020-12-22 16:27:31,733 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:27:31,795 - INFO     - werkzeug     -  * Restarting with stat
+15688 - 2020-12-22 16:27:32,325 - WARNING  - werkzeug     -  * Debugger is active!
+15688 - 2020-12-22 16:27:32,334 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15688 - 2020-12-22 16:27:32,350 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15688 - 2020-12-22 16:27:48,390 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:27:48,452 - INFO     - werkzeug     -  * Restarting with stat
+15752 - 2020-12-22 16:27:48,812 - WARNING  - werkzeug     -  * Debugger is active!
+15752 - 2020-12-22 16:27:48,834 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15752 - 2020-12-22 16:27:48,849 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15752 - 2020-12-22 16:28:50,270 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+11664 - 2020-12-22 16:28:50,302 - INFO     - werkzeug     -  * Restarting with stat
+16924 - 2020-12-22 16:40:49,784 - INFO     - werkzeug     -  * Restarting with stat
+17132 - 2020-12-22 16:40:50,246 - WARNING  - werkzeug     -  * Debugger is active!
+17132 - 2020-12-22 16:40:50,262 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+17132 - 2020-12-22 16:40:50,280 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+17132 - 2020-12-22 16:41:01,920 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:01] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+17132 - 2020-12-22 16:41:02,370 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:02] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+17132 - 2020-12-22 16:41:02,541 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:02] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+17132 - 2020-12-22 16:41:02,609 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:02] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+17132 - 2020-12-22 16:41:02,953 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:02] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+17132 - 2020-12-22 16:41:02,976 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:02] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+17132 - 2020-12-22 16:41:03,218 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 16:41:03] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+16728 - 2020-12-22 17:11:01,075 - INFO     - werkzeug     -  * Restarting with stat
+9444 - 2020-12-22 17:11:01,546 - WARNING  - werkzeug     -  * Debugger is active!
+9444 - 2020-12-22 17:11:01,559 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+9444 - 2020-12-22 17:11:01,576 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+9444 - 2020-12-22 17:12:21,552 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:21] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+9444 - 2020-12-22 17:12:21,933 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:21] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+9444 - 2020-12-22 17:12:21,936 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:21] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+9444 - 2020-12-22 17:12:22,037 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:22] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+9444 - 2020-12-22 17:12:22,461 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:22] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+9444 - 2020-12-22 17:12:22,472 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:12:22] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+9444 - 2020-12-22 17:15:44,640 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\repositories\\page_repository.py', reloading
+16728 - 2020-12-22 17:15:44,712 - INFO     - werkzeug     -  * Restarting with stat
+16700 - 2020-12-22 17:15:45,350 - WARNING  - werkzeug     -  * Debugger is active!
+16700 - 2020-12-22 17:15:45,358 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+16700 - 2020-12-22 17:15:45,405 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+16700 - 2020-12-22 17:16:11,287 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\repositories\\page_repository.py', reloading
+16728 - 2020-12-22 17:16:11,348 - INFO     - werkzeug     -  * Restarting with stat
+14636 - 2020-12-22 17:16:11,981 - WARNING  - werkzeug     -  * Debugger is active!
+14636 - 2020-12-22 17:16:11,989 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+14636 - 2020-12-22 17:16:12,012 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+14636 - 2020-12-22 17:16:17,414 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\repositories\\page_repository.py', reloading
+16728 - 2020-12-22 17:16:17,500 - INFO     - werkzeug     -  * Restarting with stat
+11420 - 2020-12-22 17:16:18,072 - WARNING  - werkzeug     -  * Debugger is active!
+11420 - 2020-12-22 17:16:18,080 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+11420 - 2020-12-22 17:16:18,098 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+11420 - 2020-12-22 17:16:25,912 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:25] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+11420 - 2020-12-22 17:16:26,450 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:26] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11420 - 2020-12-22 17:16:26,451 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:26] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11420 - 2020-12-22 17:16:26,580 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:26] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11420 - 2020-12-22 17:16:26,940 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:26] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11420 - 2020-12-22 17:16:26,941 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:16:26] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11420 - 2020-12-22 17:19:56,020 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+16728 - 2020-12-22 17:19:56,089 - INFO     - werkzeug     -  * Restarting with stat
+16096 - 2020-12-22 17:19:56,686 - DEBUG    - core_api     - session: <sqlalchemy.orm.session.Session object at 0x0000019212A3A100> 
+ dir(session): ['_Session__binds', '__class__', '__contains__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_bind', '_after_attach', '_autoflush', '_before_attach', '_bulk_save_mappings', '_close_impl', '_conditional_expire', '_connection_for_bind', '_contains_state', '_delete_impl', '_deleted', '_dirty_states', '_enable_transaction_accounting', '_expire_state', '_expunge_states', '_flush', '_flush_warning', '_flushing', '_identity_cls', '_is_clean', '_merge', '_new', '_query_cls', '_register_altered', '_register_persistent', '_remove_newly_deleted', '_save_impl', '_save_or_update_impl', '_save_or_update_state', '_update_impl', '_validate_persistent', '_warn_on_events', 'add', 'add_all', 'autocommit', 'autoflush', 'begin', 'begin_nested', 'bind', 'bind_mapper', 'bind_table', 'bulk_insert_mappings', 'bulk_save_objects', 'bulk_update_mappings', 'close', 'close_all', 'commit', 'connection', 'connection_callable', 'delete', 'deleted', 'dirty', 'dispatch', 'enable_baked_queries', 'enable_relationship_loading', 'execute', 'expire', 'expire_all', 'expire_on_commit', 'expunge', 'expunge_all', 'flush', 'get_bind', 'hash_key', 'identity_key', 'identity_map', 'info', 'invalidate', 'is_active', 'is_modified', 'merge', 'new', 'no_autoflush', 'object_session', 'prepare', 'prune', 'public_methods', 'query', 'refresh', 'rollback', 'scalar', 'transaction', 'twophase']
+16096 - 2020-12-22 17:19:56,762 - WARNING  - werkzeug     -  * Debugger is active!
+16096 - 2020-12-22 17:19:56,786 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+16096 - 2020-12-22 17:19:56,815 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+16096 - 2020-12-22 17:20:33,396 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+16728 - 2020-12-22 17:20:33,468 - INFO     - werkzeug     -  * Restarting with stat
+7392 - 2020-12-22 17:20:34,032 - DEBUG    - core_api     - session: <sqlalchemy.orm.session.Session object at 0x00000232631CC100> 
+ dir(session): ['_Session__binds', '__class__', '__contains__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_bind', '_after_attach', '_autoflush', '_before_attach', '_bulk_save_mappings', '_close_impl', '_conditional_expire', '_connection_for_bind', '_contains_state', '_delete_impl', '_deleted', '_dirty_states', '_enable_transaction_accounting', '_expire_state', '_expunge_states', '_flush', '_flush_warning', '_flushing', '_identity_cls', '_is_clean', '_merge', '_new', '_query_cls', '_register_altered', '_register_persistent', '_remove_newly_deleted', '_save_impl', '_save_or_update_impl', '_save_or_update_state', '_update_impl', '_validate_persistent', '_warn_on_events', 'add', 'add_all', 'autocommit', 'autoflush', 'begin', 'begin_nested', 'bind', 'bind_mapper', 'bind_table', 'bulk_insert_mappings', 'bulk_save_objects', 'bulk_update_mappings', 'close', 'close_all', 'commit', 'connection', 'connection_callable', 'delete', 'deleted', 'dirty', 'dispatch', 'enable_baked_queries', 'enable_relationship_loading', 'execute', 'expire', 'expire_all', 'expire_on_commit', 'expunge', 'expunge_all', 'flush', 'get_bind', 'hash_key', 'identity_key', 'identity_map', 'info', 'invalidate', 'is_active', 'is_modified', 'merge', 'new', 'no_autoflush', 'object_session', 'prepare', 'prune', 'public_methods', 'query', 'refresh', 'rollback', 'scalar', 'transaction', 'twophase']
+7392 - 2020-12-22 17:20:34,053 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:1234/pagesDB)
+7392 - 2020-12-22 17:20:34,073 - WARNING  - werkzeug     -  * Debugger is active!
+7392 - 2020-12-22 17:20:34,089 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7392 - 2020-12-22 17:20:34,123 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7392 - 2020-12-22 17:25:22,728 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:22] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+7392 - 2020-12-22 17:25:23,274 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:23] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7392 - 2020-12-22 17:25:23,275 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:23] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7392 - 2020-12-22 17:25:23,404 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:23] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7392 - 2020-12-22 17:25:23,770 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:23] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7392 - 2020-12-22 17:25:23,772 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:25:23] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7392 - 2020-12-22 17:26:09,166 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\config.py', reloading
+16728 - 2020-12-22 17:26:09,230 - INFO     - werkzeug     -  * Restarting with stat
+676 - 2020-12-22 17:26:09,756 - DEBUG    - core_api     - session: <sqlalchemy.orm.session.Session object at 0x00000202F635C0A0> 
+ dir(session): ['_Session__binds', '__class__', '__contains__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_bind', '_after_attach', '_autoflush', '_before_attach', '_bulk_save_mappings', '_close_impl', '_conditional_expire', '_connection_for_bind', '_contains_state', '_delete_impl', '_deleted', '_dirty_states', '_enable_transaction_accounting', '_expire_state', '_expunge_states', '_flush', '_flush_warning', '_flushing', '_identity_cls', '_is_clean', '_merge', '_new', '_query_cls', '_register_altered', '_register_persistent', '_remove_newly_deleted', '_save_impl', '_save_or_update_impl', '_save_or_update_state', '_update_impl', '_validate_persistent', '_warn_on_events', 'add', 'add_all', 'autocommit', 'autoflush', 'begin', 'begin_nested', 'bind', 'bind_mapper', 'bind_table', 'bulk_insert_mappings', 'bulk_save_objects', 'bulk_update_mappings', 'close', 'close_all', 'commit', 'connection', 'connection_callable', 'delete', 'deleted', 'dirty', 'dispatch', 'enable_baked_queries', 'enable_relationship_loading', 'execute', 'expire', 'expire_all', 'expire_on_commit', 'expunge', 'expunge_all', 'flush', 'get_bind', 'hash_key', 'identity_key', 'identity_map', 'info', 'invalidate', 'is_active', 'is_modified', 'merge', 'new', 'no_autoflush', 'object_session', 'prepare', 'prune', 'public_methods', 'query', 'refresh', 'rollback', 'scalar', 'transaction', 'twophase']
+676 - 2020-12-22 17:26:09,760 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pagesDB)
+676 - 2020-12-22 17:26:09,777 - WARNING  - werkzeug     -  * Debugger is active!
+676 - 2020-12-22 17:26:09,792 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+676 - 2020-12-22 17:26:09,809 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+676 - 2020-12-22 17:26:19,574 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+16728 - 2020-12-22 17:26:19,634 - INFO     - werkzeug     -  * Restarting with stat
+7184 - 2020-12-22 17:26:20,217 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pagesDB)
+7184 - 2020-12-22 17:26:20,237 - WARNING  - werkzeug     -  * Debugger is active!
+7184 - 2020-12-22 17:26:20,245 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+7184 - 2020-12-22 17:26:20,261 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+7184 - 2020-12-22 17:26:33,721 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:33] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+7184 - 2020-12-22 17:26:34,249 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:34] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:26:34,249 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:34] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:26:34,403 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:34] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:26:34,767 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:34] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:26:34,768 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:26:34] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:27:00,203 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:00] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+7184 - 2020-12-22 17:27:00,270 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:00] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:27:00,580 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:00] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:27:00,581 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:00] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:27:01,056 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:01] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:27:01,131 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:27:01] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+7184 - 2020-12-22 17:28:04,047 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\config.py', reloading
+16728 - 2020-12-22 17:28:04,121 - INFO     - werkzeug     -  * Restarting with stat
+15528 - 2020-12-22 17:28:04,710 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pagesDB)
+15528 - 2020-12-22 17:28:04,728 - WARNING  - werkzeug     -  * Debugger is active!
+15528 - 2020-12-22 17:28:04,735 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+15528 - 2020-12-22 17:28:04,752 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+15528 - 2020-12-22 17:28:14,159 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:14] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+15528 - 2020-12-22 17:28:14,686 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:14] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+15528 - 2020-12-22 17:28:14,687 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:14] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+15528 - 2020-12-22 17:28:14,829 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:14] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+15528 - 2020-12-22 17:28:15,190 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:15] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+15528 - 2020-12-22 17:28:15,191 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:28:15] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+15528 - 2020-12-22 17:29:47,141 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+16728 - 2020-12-22 17:29:47,208 - INFO     - werkzeug     -  * Restarting with stat
+10268 - 2020-12-22 17:29:47,791 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pagesDB)
+10268 - 2020-12-22 17:29:47,810 - WARNING  - werkzeug     -  * Debugger is active!
+10268 - 2020-12-22 17:29:47,821 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+10268 - 2020-12-22 17:29:47,839 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+10268 - 2020-12-22 17:30:03,021 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+16728 - 2020-12-22 17:30:03,097 - INFO     - werkzeug     -  * Restarting with stat
+8524 - 2020-12-22 17:30:17,525 - DEBUG    - core_api     - session bind: <sqlalchemy.orm.session.Session object at 0x000001174090A100>
+8524 - 2020-12-22 17:30:17,558 - INFO     - werkzeug     -  * Restarting with stat
+6260 - 2020-12-22 17:30:18,026 - DEBUG    - core_api     - session bind: <sqlalchemy.orm.session.Session object at 0x000002407987B0A0>
+6260 - 2020-12-22 17:30:18,042 - WARNING  - werkzeug     -  * Debugger is active!
+6260 - 2020-12-22 17:30:18,050 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+6260 - 2020-12-22 17:30:18,065 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+6260 - 2020-12-22 17:30:35,288 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\core_api.py', reloading
+8524 - 2020-12-22 17:30:35,366 - INFO     - werkzeug     -  * Restarting with stat
+14584 - 2020-12-22 17:30:35,971 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pagesDB)
+14584 - 2020-12-22 17:30:35,988 - WARNING  - werkzeug     -  * Debugger is active!
+14584 - 2020-12-22 17:30:35,997 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+14584 - 2020-12-22 17:30:36,018 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+14584 - 2020-12-22 17:31:01,865 - INFO     - werkzeug     -  * Detected change in 'C:\\Users\\gianpio.domiziani\\Desktop\\development\\api_project\\app\\config.py', reloading
+8524 - 2020-12-22 17:31:01,929 - INFO     - werkzeug     -  * Restarting with stat
+14148 - 2020-12-22 17:31:02,516 - DEBUG    - core_api     - session bind: Engine(postgresql://Pino:***@localhost:54321/pages)
+14148 - 2020-12-22 17:31:02,535 - WARNING  - werkzeug     -  * Debugger is active!
+14148 - 2020-12-22 17:31:02,543 - INFO     - werkzeug     -  * Debugger PIN: 264-666-732
+14148 - 2020-12-22 17:31:02,558 - INFO     - werkzeug     -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+14148 - 2020-12-22 17:31:12,941 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:12] "[35m[1mGET /api/pages HTTP/1.1[0m" 500 -
+14148 - 2020-12-22 17:31:13,459 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:13] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+14148 - 2020-12-22 17:31:13,459 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:13] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+14148 - 2020-12-22 17:31:13,611 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:13] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+14148 - 2020-12-22 17:31:13,979 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:13] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+14148 - 2020-12-22 17:31:13,980 - INFO     - werkzeug     - 127.0.0.1 - - [22/Dec/2020 17:31:13] "[37mGET /api/pages?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -

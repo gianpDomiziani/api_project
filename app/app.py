@@ -1,10 +1,10 @@
-import json
-import logging
-import logging.config
-with open('../log_config.json', 'r') as f:
-    log_config = json.load(f)
-logging.config.dictConfig(log_config)
-logger = logging.getLogger(__name__)
+#import json
+#import logging
+#import logging.config
+#with open('../log_config.json', 'r') as f:
+#    log_config = json.load(f)
+#logging.config.dictConfig(log_config)
+#logger = logging.getLogger(__name__)
 
 from flask import Flask
 
