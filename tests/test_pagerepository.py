@@ -7,48 +7,46 @@ sys.path.append(
     )
 )
 from models import page_model
-from orm import page_orm
 from repositories import page_repository
 
-class TestRepository:
-    """ Integration test: we're testing if our repository interacts well with the DB. """
+import sqlite3
+
+session = sqlite3.connect('../page.db')
+
+emptypage = page_model.Page(pageid=1).page
+
+class TestRepositoryLayer:
+
+
+   @staticmethod
+    def test_repo_get_all():
+        repo = page_repository.SQLiteRepository(session)
+        pages = repo.get_all()
+        cursor = session.cursor()
+        expected = cursor.execute(""" SELECT * FROM pages """).fetchall()
+        assert expected == pages
 
     @staticmethod
-    def test_repo_can_save_a_page(session):
-
-        page = page_model.Page()  # empty page
-        repo = page_repository.SqlAlchemyRepository(session)
-        repo.add(page)  # method under testing
+    def test_repo_can_add_page():
+        # TO DO: Note that the repository should interact with the DB and with the Domain model. 
+        # This means the repo should get the page model structure from the page_model.
+        p = {'id': 829, 'title': 'SQLite', 'header': 'with python', 'author': 'Gianni', 'body': 'OK'}
+        #page = page_model.Page(p)
+        repo = page_repository.SQLiteRepository(session)
+        repo.insert(p)
+        id = p['id']
+        cursor = session.cursor()
+        expected = cursor.execute(""" SELECT * FROM pages WHERE id=? """, (id, )).fetchone()
         session.commit()
-
-        rows = list(session.execute(
-            """ SELECT pageid, title, header, author, body FROM pages """
-        ))
-        assert rows == [('', '', '', '', '')]
-
-
-    def retrive_idpage(self, session):
-        session.execute(
-            """ INSERT INTO pages (pageid, title, header, author, body)
-                VALUES (123, 'WOW', '?', 'Pino', 'Nothing')  """
-        )
-        [[page_id]] = session.execute(
-            """ SELECT id FROM pages WHERE pageid=:123 AND title=:'WOW' """
-        )
-        return page_id
-
-    def test_repo_can_load_a_page(self, session):
-        
-        page_id = self.retrive_idpage(session)
-        repo = page_repository.SqlAlchemyRepository(session)
-        retrived = repo.get(page_id)
-
-        expected = page_model.Page(123, 'WOW', '?', 'Pino', 'Nothing')
-        assert retrived.pageid == expected.pageid
-        assert retrived.body == expected.body
+        assert  expected[1] == p['title']
     
-
-
-
+    @staticmethod
+    def test_repo_get_a_page():
+        # here the get_from_id repository method is tested.
+        id = 829
+        repo = page_repository.SQLiteRepository(session)
+        page = repo.get_by_id(id)
+        session.close()
+        assert page[1] == 'SQLite'
 
 
