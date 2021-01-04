@@ -49,6 +49,17 @@ def get_page_by_id(id):
     page = repo.get(id)
     return build_json_response(page, 200, 'API.get_page_by_id')
 
+@bp.route('/insert/<int:id>')
+def insert(id):
+    pass
+
+@bp.route('/modify/<int:id>')
+def update(id):
+    pass
+
+@bp.route('/delete/<int:id>')
+def delete(id):
+    pass
     
 
     

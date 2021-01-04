@@ -12,11 +12,23 @@ from models.page_model import Page
 class AbstractRepository(abc.ABC):
 
     @abc.abstractmethod
-    def add(self, page: dict):
+    def insert(self, page: dict):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def get(self, id: int, ServePages) -> dict:
+    def get_all(self, ServePages) -> dict:
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_by_id(self, id: int, ServePages) -> dict:
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def update(self, id: int) -> dict:
+        raise NotImplementedError
+
+    abc.abstractmethod
+    def delete(self, id: id) -> dict:
         raise NotImplementedError
 
 class FakeRepository(AbstractRepository):
@@ -34,18 +46,25 @@ class FakeRepository(AbstractRepository):
         return list(self._pages)
     
 
-class SqlAlchemyRepository(AbstractRepository):
-
+class SQLiteRepository(AbstractRepository):
+    
     def __init__(self, session):
         self.session = session
 
-    def add(self, page):
+    def insert(self, page):
         self.session.add(page)
     
-    def get(self, id: int, Page) -> dict:
+    def get_all(self, id: int, Page) -> dict:
         return self.session.query(Page).filter_by(id).one()
+    
+    def get_by_id(self, id: int) -> dict:
+        pass
+
+    def update(self, id: int) -> dict:
+        pass
+
+    def delete(self, id: int) -> dict:
+        pass
     
     def list(self):
         return self.session.query(Page).all()
-
-
