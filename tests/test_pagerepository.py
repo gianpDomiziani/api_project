@@ -16,7 +16,7 @@ emptypage = page_model.Page(pageid=1).page
 class TestRepositoryLayer:
     @staticmethod
     def test_repo_get_all():
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         pages = repo.get_all()
         cursor = session.cursor()
@@ -30,7 +30,7 @@ class TestRepositoryLayer:
         # This means the repo should get the page model structure from the page_model.
         p = {'id': 829, 'title': 'SQLite', 'header': 'with python', 'author': 'Gianni', 'body': 'OK'}
         #page = page_model.Page(p)
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         repo.insert(p)
         session.commit()
@@ -43,7 +43,7 @@ class TestRepositoryLayer:
     @staticmethod
     def test_repo_get_a_page():
         id = 829
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         page = repo.get_by_id(id)
         page1 = repo.get_by_id('NAN')
@@ -54,7 +54,7 @@ class TestRepositoryLayer:
     @staticmethod
     def test_repo_can_update():
         up = {'body': 'update body', 'header': 'update header'}
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         repo.update(829, up)
         session.commit()
@@ -68,7 +68,7 @@ class TestRepositoryLayer:
     
     @staticmethod
     def test_repo_can_delete():
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         repo.delete(829)
         session.commit()

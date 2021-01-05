@@ -1,7 +1,7 @@
 import sqlite3
 
 # init a db session
-conn = sqlite3.connect('page.db')
+conn = sqlite3.connect('./page.db')
 # create a curso object 
 cursor = conn.cursor()
 # drop table pages if it exists

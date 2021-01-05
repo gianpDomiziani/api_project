@@ -26,22 +26,23 @@ import sqlite3
 import config
 from repositories import page_repository
 from models import page_model
+#from db.db_utils import dbhandler
 
 bp = Blueprint('core_api', __name__, url_prefix='/api')
 
 @bp.route('/pages')
 def get_pages():
     log_index = 'Core_api.get_pages>'
-    session = sqlite3.connect('../page.db')
+    session = sqlite3.connect('../db/page.db')
     repo = page_repository.SQLiteRepository(session)
     pages = repo.get_all()
-    logger.info(f"{log_index} returning {pages}")
     session.close()
+    logger.info(f"{log_index} returning {pages}")
     return build_json_response(pages, 200, 'API.get_pages')
 
 @bp.route('/page/<id>')
 def get_page_by_id(id):
-    session = sqlite3.connect('../page.db')
+    session = sqlite3.connect('../db/page.db')
     repo = page_repository.SQLiteRepository(session)
     page = repo.get_by_id(id)
     session.close()
@@ -58,7 +59,7 @@ def insert():
         logger.error(f"{log_index} data must be in json format -> {json_page}")
         error = "data must be in json format."
         return build_error_response(error, api_method='insert')
-    session = sqlite3.connect('../page.db')
+    session = sqlite3.connect('../db/page.db')
     repo = page_repository.SQLiteRepository(session)
     repo.insert(json_page)
     session.commit()
@@ -70,7 +71,7 @@ def insert():
 def update(id):
     json_update = request.get_json()
     if 'body' or 'header' in json_update:
-        session = sqlite3.connect('../page.db')
+        session = sqlite3.connect('../db/page.db')
         repo = page_repository.SQLiteRepository(session)
         state= repo.update(id, json_update)
         session.commit()
@@ -87,7 +88,7 @@ def update(id):
 @bp.route('/delete/<id>')
 def delete(id):
     log_index = 'Core_api.delete>'
-    session = sqlite3.connect('../page.db')
+    session = sqlite3.connect('../db/page.db')
     logger.debug(f'{log_index} id={id}')
     repo = page_repository.SQLiteRepository(session)
     status = repo.delete(id)
