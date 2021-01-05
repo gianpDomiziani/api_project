@@ -4,9 +4,11 @@ import sqlite3
 conn = sqlite3.connect('page.db')
 # create a curso object 
 cursor = conn.cursor()
+# drop table pages if it exists
+cursor.execute("DROP TABLE IF EXISTS pages")
 # use its execute method for performing the following SQL query
 cursor.execute(""" CREATE TABLE pages
-                   (id integer, title text, header text, author text, body text) """)
+                   (id INTEGER, title TEXT, header TEXT, author TEXT, body TEXT, edit INTEGER) """)
 # save the change and close the session.
 conn.commit()
 conn.close()

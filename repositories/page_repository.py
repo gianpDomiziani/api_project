@@ -21,7 +21,6 @@ class SQLiteRepository:
         # avoid SQL injection attack
         page_tuple = (page['id'], page['title'], page['header'], page['author'], page['body'])
         self.cursor.execute("INSERT INTO pages(ID, TITLE, HEADER, AUTHOR, BODY) VALUES(?,?,?,?,?)", page_tuple)
-        return 200
     
     def get_all(self) -> []:
         self.cursor.execute("SELECT * FROM pages")
@@ -32,16 +31,12 @@ class SQLiteRepository:
         page = self.cursor.fetchone()
         return page
 
-    def update(self, id: int, req: dict) -> dict:
+    def update(self, id: int, req: dict):
         if req['body']:
-            self.cursor.execute(""" UPDATE pages SET body=? WHERE id=? """, (req['body'], id))
+            self.cursor.execute(""" UPDATE pages SET body=?, edit=? WHERE id=? """, (req['body'], 1, id))
         if req['header']:
-            self.cursor.execute(""" UPDATE pages SET header=? WHERE id=? """, (req['header'], id))
+            self.cursor.execute(""" UPDATE pages SET header=?, edit=? WHERE id=? """, (req['header'], 1, id))
     
-
-
-        
-
     def delete(self, id: int):
         self.cursor.execute("DELETE FROM pages WHERE id=?", (id,))
 

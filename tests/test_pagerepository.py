@@ -61,6 +61,7 @@ class TestRepositoryLayer:
         expected = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
         session.close()
         assert expected[4] == 'update body'
+        assert expected[5] == 1
     
     @staticmethod
     def test_repo_can_delete():
