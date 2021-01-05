@@ -52,11 +52,23 @@ class TestRepositoryLayer:
     
     @staticmethod
     def test_repo_can_update():
-        pass
+        up = {'body': 'update body', 'header': 'update header'}
+        session = sqlite3.connect('../page.db')
+        repo = page_repository.SQLiteRepository(session)
+        repo.update(829, up)
+        session.commit()
+        cur = session.cursor()
+        expected = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
+        session.close()
+        assert expected[4] == 'update body'
     
     @staticmethod
     def test_repo_can_delete():
-        id = None
         session = sqlite3.connect('../page.db')
         repo = page_repository.SQLiteRepository(session)
-        repo.delete(id)
+        repo.delete(829)
+        session.commit()
+        cur = session.cursor()
+        expected = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
+        session.close()
+        assert expected == None
