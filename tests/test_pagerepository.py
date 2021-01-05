@@ -33,16 +33,15 @@ class TestRepositoryLayer:
         session = sqlite3.connect('../page.db')
         repo = page_repository.SQLiteRepository(session)
         repo.insert(p)
+        session.commit()
         id = p['id']
         cursor = session.cursor()
         expected = cursor.execute(""" SELECT * FROM pages WHERE id=? """, (id, )).fetchone()
-        session.commit()
         session.close()
         assert  expected[1] == p['title']
     
     @staticmethod
     def test_repo_get_a_page():
-        # here the get_from_id repository method is tested.
         id = 829
         session = sqlite3.connect('../page.db')
         repo = page_repository.SQLiteRepository(session)
