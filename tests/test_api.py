@@ -20,4 +20,5 @@ def random_body():
 class TestApi:
 
     @staticmethod
-    def test_
+    def test_api_get_all():
+        pass
