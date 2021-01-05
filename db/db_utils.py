@@ -2,7 +2,7 @@ import contextlib
 import sqlite3
 
 def start_db():
-    return sqlite3.connect('./page.db')
+    return sqlite3.connect('../db/page.db')
 
 def close_db(session):
     return session.close()
