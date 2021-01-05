@@ -70,13 +70,12 @@ def update(id):
         if 'body' or 'header' in json_update:
             session = sqlite3.connect('../page.db')
             repo = page_repository.SQLiteRepository(session)
-            try:
-                repo.update(id, json_update)
-                session.commit()
-                session.close()
-                return build_json_response('OK', 200, 'update')
-            except sqlite3.Error as e:
-                return build_error_response(e, 'update')
+            repo.update(id, json_update)
+            session.commit()
+            session.close()
+            return build_json_response('OK', 200, 'update')
+    e = 'No data in request.'   
+    return build_error_response(e, 'update')
     
     
 
