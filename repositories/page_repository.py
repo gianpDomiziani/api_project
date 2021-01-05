@@ -29,14 +29,24 @@ class SQLiteRepository:
     def get_by_id(self, id: int) -> dict:
         self.cursor.execute("SELECT * FROM pages WHERE id=?", (id,))
         page = self.cursor.fetchone()
-        return page
+        if page:
+            return page
+        return False
 
     def update(self, id: int, req: dict):
-        if req['body']:
-            self.cursor.execute(""" UPDATE pages SET body=?, edit=? WHERE id=? """, (req['body'], 1, id))
-        if req['header']:
-            self.cursor.execute(""" UPDATE pages SET header=?, edit=? WHERE id=? """, (req['header'], 1, id))
+        page = self.get_by_id(id)
+        if page:
+            if req['body']:
+                self.cursor.execute(""" UPDATE pages SET body=?, edit=? WHERE id=? """, (req['body'], 1, id))
+            if req['header']:
+                self.cursor.execute(""" UPDATE pages SET header=?, edit=? WHERE id=? """, (req['header'], 1, id))
+            return True
+        return False
     
     def delete(self, id: int):
-        self.cursor.execute("DELETE FROM pages WHERE id=?", (id,))
+        page = self.get_by_id(id)
+        if page:
+            self.cursor.execute("DELETE FROM pages WHERE id=?", (id,))
+            return True
+        return False
 

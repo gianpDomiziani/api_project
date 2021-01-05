@@ -22,7 +22,7 @@ class TestRepositoryLayer:
         cursor = session.cursor()
         expected = cursor.execute(""" SELECT * FROM pages """).fetchall()
         session.close()
-        assert expected == pages
+        assert expected == pages, 'Returning pages should match all pages present in DB.'
 
     @staticmethod
     def test_repo_can_add_page():
@@ -38,7 +38,7 @@ class TestRepositoryLayer:
         cursor = session.cursor()
         expected = cursor.execute(""" SELECT * FROM pages WHERE id=? """, (id, )).fetchone()
         session.close()
-        assert  expected[1] == p['title']
+        assert  expected[1] == p['title'], 'The Adding page should match the request page.'
     
     @staticmethod
     def test_repo_get_a_page():
@@ -46,8 +46,10 @@ class TestRepositoryLayer:
         session = sqlite3.connect('../page.db')
         repo = page_repository.SQLiteRepository(session)
         page = repo.get_by_id(id)
+        page1 = repo.get_by_id('NAN')
         session.close()
         assert page[1] == 'SQLite'
+        assert page1 == False, 'id should be a int && id should be present in DB.'
     
     @staticmethod
     def test_repo_can_update():
@@ -58,9 +60,11 @@ class TestRepositoryLayer:
         session.commit()
         cur = session.cursor()
         expected = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
+        status = repo.update('NAN', up)
         session.close()
         assert expected[4] == 'update body'
         assert expected[5] == 1
+        assert status == False, 'id should be a int && id should be present in DB.'
     
     @staticmethod
     def test_repo_can_delete():
@@ -69,6 +73,8 @@ class TestRepositoryLayer:
         repo.delete(829)
         session.commit()
         cur = session.cursor()
-        expected = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
+        expected1 = cur.execute(" SELECT * FROM pages WHERE id=?", (829,)).fetchone()
+        status = repo.delete('kl')
         session.close()
-        assert expected == None
+        assert expected1 == None
+        assert status == False, 'id should be a int && id should be present in DB.'

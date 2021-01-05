@@ -45,7 +45,10 @@ def get_page_by_id(id):
     repo = page_repository.SQLiteRepository(session)
     page = repo.get_by_id(id)
     session.close()
-    return build_json_response(page, 200, 'API.get_page_by_id')
+    if page:
+        return build_json_response(page, 200, 'API.get_page_by_id')
+    e = 'Page is not present.'
+    return build_error_response(e, 'API.get_page_by_id')
 
 @bp.route('/insert', methods=['POST'])
 def insert():
@@ -69,10 +72,13 @@ def update(id):
     if 'body' or 'header' in json_update:
         session = sqlite3.connect('../page.db')
         repo = page_repository.SQLiteRepository(session)
-        repo.update(id, json_update)
+        state= repo.update(id, json_update)
         session.commit()
         session.close()
-        return build_json_response('OK', 200, 'update')
+        if state:
+            return build_json_response('OK', 200, 'update')
+        else:
+            return build_error_response('Page is not present', 'update')
     e = 'No data in request.'   
     return build_error_response(e, 'update')
     
@@ -84,9 +90,11 @@ def delete(id):
     session = sqlite3.connect('../page.db')
     logger.debug(f'{log_index} id={id}')
     repo = page_repository.SQLiteRepository(session)
-    repo.delete(id)
+    status = repo.delete(id)
     session.commit()
     session.close()
-    return build_json_response(f'page with id={id} removed', 200, 'delete')
+    if status:
+        return build_json_response(f'page with id={id} removed', 200, 'delete')
+    return build_error_response(f'There is no page with id={id}', 'delete')
 
     
