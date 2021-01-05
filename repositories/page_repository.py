@@ -32,10 +32,16 @@ class SQLiteRepository:
         page = self.cursor.fetchone()
         return page
 
-    def update(self, id: int) -> dict:
-        pass
+    def update(self, id: int, req: dict) -> dict:
+        if req['body']:
+            self.cursor.execute(""" UPDATE pages SET body=? WHERE id=? """, (req['body'], id))
+        if req['header']:
+            self.cursor.execute(""" UPDATE pages SET header=? WHERE id=? """, (req['header'], id))
+    
+
+
+        
 
     def delete(self, id: int):
         self.cursor.execute("DELETE FROM pages WHERE id=?", (id,))
-        return 200
 

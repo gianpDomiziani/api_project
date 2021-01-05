@@ -21,45 +21,74 @@ from flask import (
     Blueprint, g, request
 )
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+import sqlite3
 
 import config
 from repositories import page_repository
 from models import page_model
-from services import page_services
-from orm import page_orm
-
-page_orm.start_mapper()
-get_session = sessionmaker(bind=create_engine(config.get_postgres_uri()))
-session = get_session()
-logger.debug(f"session bind: {session.bind}")
 
 bp = Blueprint('core_api', __name__, url_prefix='/api')
 
 @bp.route('/pages')
 def get_pages():
-    session = get_session()
-    repo = page_repository.SqlAlchemyRepository(session)
-    pages = repo.list()
+    log_index = 'Core_api.get_pages>'
+    session = sqlite3.connect('../page.db')
+    repo = page_repository.SQLiteRepository(session)
+    pages = repo.get_all()
+    logger.info(f"{log_index} returning {pages}")
+    session.close()
     return build_json_response(pages, 200, 'API.get_pages')
 
-@bp.route('/page/<int:id>')
+@bp.route('/page/<id>')
 def get_page_by_id(id):
-    page = repo.get(id)
+    session = sqlite3.connect('../page.db')
+    repo = page_repository.SQLiteRepository(session)
+    page = repo.get_by_id(id)
+    session.close()
     return build_json_response(page, 200, 'API.get_page_by_id')
 
-@bp.route('/insert/<int:id>')
-def insert(id):
-    pass
+@bp.route('/insert', methods=['POST'])
+def insert():
+    log_index = 'Core_api.insert>'
+    json_page = request.get_json()
+    if not json_page:
+        logger.error(f"{log_index} data must be in json format -> {json_page}")
+        error = "data must be in json format."
+        return build_error_response(error, api_method='insert')
+    session = sqlite3.connect('../page.db')
+    repo = page_repository.SQLiteRepository(session)
+    repo.insert(json_page)
+    session.commit()
+    session.close()
+    logger.info(f"{log_index} page: {json_page} insert")
+    return build_json_response('OK', 200, 'insert')
 
-@bp.route('/modify/<int:id>')
+@bp.route('/modify/<id>', methods=['POST'])
 def update(id):
-    pass
-
-@bp.route('/delete/<int:id>')
-def delete(id):
-    pass
+    json_update = request.get_json()
+    if json_update:
+        if 'body' or 'header' in json_update:
+            session = sqlite3.connect('../page.db')
+            repo = page_repository.SQLiteRepository(session)
+            try:
+                repo.update(id, json_update)
+                session.commit()
+                session.close()
+                return build_json_response('OK', 200, 'update')
+            except sqlite3.Error as e:
+                return build_error_response(e, 'update')
     
+    
+
+@bp.route('/delete/<id>')
+def delete(id):
+    log_index = 'Core_api.delete>'
+    session = sqlite3.connect('../page.db')
+    logger.debug(f'{log_index} id={id}')
+    repo = page_repository.SQLiteRepository(session)
+    repo.delete(id)
+    session.commit()
+    session.close()
+    return build_json_response(f'page with id={id} removed', 200, 'delete')
 
     

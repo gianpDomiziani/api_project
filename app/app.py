@@ -14,4 +14,4 @@ from core_api import bp
 app.register_blueprint(bp)
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=8080, debug=True)
+    app.run('127.0.0.1', port=8080, debug=True)
