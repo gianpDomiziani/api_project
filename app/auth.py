@@ -18,7 +18,7 @@ def login_required(view):
     def wrapped_view(**kwargs):
 
         if not g.user:
-            return build_error_response('User is not logged in.')
+            return build_error_response('User is not logged in.', f'{view}')
         return view(**kwargs)
 
     return wrapped_view

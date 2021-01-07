@@ -23,8 +23,10 @@ class SQLiteRepository:
         self._cursor.execute("INSERT INTO post(AUTHOR_ID, TITLE, BODY) VALUES(?,?,?)", new_post)
     
     def get_all(self) -> []:
-        self._cursor.execute("SELECT * FROM post")
-        return self._cursor.fetchall()
+
+        return self._cursor.execute("SELECT p.id, title, body, created, author_id, username"
+                             " FROM post p JOIN user u ON p.author_id = u.id"
+                             " ORDER BY created DESC").fetchall()
     
     def get_by_id(self, id: int) -> dict:
         self._cursor.execute("SELECT * FROM post WHERE author_id=?", (id,))

@@ -30,7 +30,11 @@ def get_posts():
     repo = post_repository.SQLiteRepository(db)
     posts = repo.get_all()
     logger.debug(f"posts: {posts}")
-    return build_json_response(posts, 200, 'API.get_posts')
+    posts_ls = []
+    for post in posts:
+        post = post_model.Post(post['author_id'], post['title'], post['body']).post
+        posts_ls.append(post)
+    return build_json_response(posts_ls, 200, 'API.get_posts')
 
 @bp.route('/post/<id>')
 def get_post_by_id(id):
@@ -38,6 +42,7 @@ def get_post_by_id(id):
     repo = post_repository.SQLiteRepository(db)
     post = repo.get_by_id(id)
     if post:
+        post = post_model.Post(post['author_id'], post['title'], post['body']).post
         return build_json_response(post, 200, 'API.get_post_by_id')
     e = 'Post is not present.'
     return build_error_response(e, 'API.get_post_by_id')
