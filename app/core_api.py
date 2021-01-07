@@ -6,63 +6,65 @@ sys.path.append(
     )
 )
 
-# === Logger START===
-import json
-import logging
-import logging.config
-with open('../log_config.json', 'r') as f:
-    log_config = json.load(f)
-logging.config.dictConfig(log_config)
-logger = logging.getLogger(__name__)
-# === Logger END ===
+from app.custom_logger import logger
 
-from flask_utils import *
+from app.flask_utils import *
 from flask import (
     Blueprint, g, request
 )
 
-import sqlite3
 
-import config
-from repositories import page_repository
-from models import page_model
-from db.db_utils import dbhandler
+from app.repositories import post_repository
+from app.models import post_model
+from app.auth import login_required
+from app.models import post_model
+from app.db import get_db
+
 
 bp = Blueprint('core_api', __name__, url_prefix='/api')
 
-@bp.route('/pages')
-def get_pages():
-    log_index = 'Core_api.get_pages>'
-    with dbhandler() as session:
-        repo = page_repository.SQLiteRepository(session)
-        pages = repo.get_all()
-        logger.info(f"{log_index} returning {pages}")
-    return build_json_response(pages, 200, 'API.get_pages')
+@bp.route('/posts')
+def get_posts():
+    log_index = 'Core_api.get_posts>'
+    db = get_db()
+    repo = post_repository.SQLiteRepository(db)
+    posts = repo.get_all()
+    logger.debug(f"posts: {posts}")
+    return build_json_response(posts, 200, 'API.get_posts')
 
-@bp.route('/page/<id>')
-def get_page_by_id(id):
-    with dbhandler() as session:
-        repo = page_repository.SQLiteRepository(session)
-        page = repo.get_by_id(id)
-    if page:
-        return build_json_response(page, 200, 'API.get_page_by_id')
-    e = 'Page is not present.'
-    return build_error_response(e, 'API.get_page_by_id')
+@bp.route('/post/<id>')
+def get_post_by_id(id):
+    db = get_db()
+    repo = post_repository.SQLiteRepository(db)
+    post = repo.get_by_id(id)
+    if post:
+        return build_json_response(post, 200, 'API.get_post_by_id')
+    e = 'Post is not present.'
+    return build_error_response(e, 'API.get_post_by_id')
 
 @bp.route('/insert', methods=['POST'])
+@login_required
 def insert():
     log_index = 'Core_api.insert>'
-    json_page = request.get_json()
-    if not json_page:
-        logger.error(f"{log_index} data must be in json format -> {json_page}")
+    json_post = request.get_json()
+    error = None
+
+    if not json_post:
+        logger.error(f"{log_index} data must be in json format -> {json_post}")
         error = "data must be in json format."
-        return build_error_response(error, api_method='insert')
-    with dbhandler() as session:
-        repo = page_repository.SQLiteRepository(session)
-        repo.insert(json_page)
-        session.commit()
-    logger.info(f"{log_index} page: {json_page} insert")
-    return build_json_response('OK', 200, 'insert')
+    if not json_post['title']:
+        error = "No title."
+    elif not json_post['body']:
+        error = "No body."
+    if not error:
+        db = get_db()
+        repo = post_repository.SQLiteRepository(db)
+        new_post = {"author_id": g.user['id'], "title": json_post['title'], "body": json_post['body']}
+        repo.insert(new_post)
+        db.commit()
+        logger.info(f"{log_index} post: {new_post} insert")
+        return build_json_response('OK', 200, 'insert')
+    return build_error_response(error, 'core_api.insert')
 
 @bp.route('/modify/<id>', methods=['POST'])
 def update(id):

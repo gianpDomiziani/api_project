@@ -2,15 +2,13 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Page:
+class Post:
     """Simple resource class """
 
-    pageid: int
+    author_id: int
     title: str = ""
-    header: str = ""
-    author: str = ""
     body: str = ""
 
     @property
-    def page(self):
+    def post(self):
         return self.__dict__

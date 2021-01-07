@@ -6,19 +6,19 @@ sys.path.append(
         os.path.join(os.path.dirname(__file__), os.pardir)
     )
 )
-from models import page_model
-from repositories import page_repository
+from app.models import page_model
+from app.repositories import page_repository
 from db.db_utils import dbhandler
 
 import sqlite3
 
-emptypage = page_model.Page(pageid=1).page
+emptypost = post_model.Post(postid=1).post
 
 class TestRepositoryLayer:
     @staticmethod
     def test_repo_get_all():
         with dbhandler() as session:
-            repo = page_repository.SQLiteRepository(session)
+            repo = post_repository.SQLiteRepository(session)
             pages = repo.get_all()
             cursor = session.cursor()
             expected = cursor.execute(""" SELECT * FROM pages """).fetchall()
