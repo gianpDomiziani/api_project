@@ -18,9 +18,8 @@ class SQLiteRepository:
         self._cursor = session.cursor()
 
     def insert(self, new_post):
-        # avoid SQL injection attack
-        new_post = (new_post['author_id'], new_post['title'], new_post['body'])
-        self._cursor.execute("INSERT INTO post(AUTHOR_ID, TITLE, BODY) VALUES(?,?,?)", new_post)
+        new_post = Post(new_post['author_id'], new_post['title'], new_post['body']).post
+        self._cursor.execute("INSERT INTO post(AUTHOR_ID, TITLE, BODY) VALUES(?,?,?)", (new_post['author_id'], new_post['title'], new_post['body']))
     
     def get_all(self) -> []:
 
@@ -29,9 +28,9 @@ class SQLiteRepository:
                              " ORDER BY created DESC").fetchall()
     
     def get_by_id(self, id: int) -> dict:
-        self._cursor.execute("SELECT * FROM post WHERE author_id=?", (id,))
-        post = self._cursor.fetchone()
+        post = self._cursor.execute("SELECT * FROM post WHERE author_id=?", (id,)).fetchone()
         if post:
+            post = Post(author_id=post[1], title=post[3], body=post[4]).post
             return post
         return False
 
@@ -41,7 +40,7 @@ class SQLiteRepository:
             if req['body']:
                 self._cursor.execute(""" UPDATE post SET body=?, edit=? WHERE author_id=? """, (req['body'], 1, id))
             if req['title']:
-                self._cursor.execute(""" UPDATE post SET title=?, edit=? WHERE id=? """, (req['header'], 1, id))
+                self._cursor.execute(""" UPDATE post SET title=?, edit=? WHERE id=? """, (req['title'], 1, id))
             return True
         return False
     

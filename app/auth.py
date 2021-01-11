@@ -4,10 +4,10 @@ from flask import (
 from werkzeug.security import check_password_hash, generate_password_hash
 import functools
 
-from app.repositories import auth_repository
-from app.custom_logger import logger
-from app.flask_utils import *
-from app.db import get_db
+from .repositories import auth_repository
+from .custom_logger import logger
+from .flask_utils import *
+from .db import get_db
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 

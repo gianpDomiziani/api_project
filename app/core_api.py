@@ -6,7 +6,7 @@ sys.path.append(
     )
 )
 
-from app.custom_logger import logger
+from .custom_logger import logger
 
 from app.flask_utils import *
 from flask import (
@@ -30,10 +30,7 @@ def get_posts():
     repo = post_repository.SQLiteRepository(db)
     posts = repo.get_all()
     logger.debug(f"posts: {posts}")
-    posts_ls = []
-    for post in posts:
-        post = post_model.Post(post['author_id'], post['title'], post['body']).post
-        posts_ls.append(post)
+    posts_ls = [post_model.Post(p['author_id'], p['title'], p['body']).post for p in posts]
     return build_json_response(posts_ls, 200, 'API.get_posts')
 
 @bp.route('/post/<id>')
@@ -64,7 +61,7 @@ def insert():
     if not error:
         db = get_db()
         repo = post_repository.SQLiteRepository(db)
-        new_post = {"author_id": g.user['id'], "title": json_post['title'], "body": json_post['body']}
+        new_post = post_model.Post(g.user['id'], json_post['title'], json_post['body']).post
         repo.insert(new_post)
         db.commit()
         logger.info(f"{log_index} post: {new_post} insert")
@@ -74,7 +71,11 @@ def insert():
 @bp.route('/modify/<id>', methods=['POST'])
 def update(id):
     json_update = request.get_json()
-    if 'body' or 'header' in json_update:
+    if 'title' or 'body' in json_update:
+        db = get_db()
+        repo = post_repository.SQLiteRepository(db)
+        updated_post =
+        state = repo.update(id, json_update)
         with dbhandler() as session:
             repo = page_repository.SQLiteRepository(session)
             state = repo.update(id, json_update)

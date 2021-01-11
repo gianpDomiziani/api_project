@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(__file__) + '../app')
 
-from app.flask_utils import create_app
+from app import create_app
 from app.config import default_config
 from app.custom_logger import logger
 
