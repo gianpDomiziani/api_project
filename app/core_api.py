@@ -74,7 +74,6 @@ def update(id):
     if 'title' or 'body' in json_update:
         db = get_db()
         repo = post_repository.SQLiteRepository(db)
-        updated_post =
         state = repo.update(id, json_update)
         with dbhandler() as session:
             repo = page_repository.SQLiteRepository(session)
