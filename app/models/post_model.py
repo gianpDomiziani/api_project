@@ -6,6 +6,7 @@ class Post:
     """Simple resource class """
 
     author_id: int
+    author: str = ""
     title: str = ""
     body: str = ""
 

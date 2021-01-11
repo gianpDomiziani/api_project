@@ -25,17 +25,20 @@ def login_required(view):
 
 @bp.before_app_request
 def load_logged_in_user():
-    """ Before serving any requests, check if an user is already logged. If yes store its information in g.user. """
+    """ Before serving any requests, check if an user is already logged. If yes store its information (id, username) in g.user. """
 
     user_id = session.get('user_id')
     
     if not user_id:
+        logger.debug("load_logged_in_user> not user")
         g.user = None
     else:
+        logger.debug(f"load_logged_in_user> user_id={user_id}")
         db = get_db()
         repo = auth_repository.SQLiteRepository(db)
-        user = repo.get_user_from_id(user_id)
-        g.user = user
+        # get userid and username.
+        g.user = repo.get_user_from_id(user_id)
+        logger.debug(f"g.user -> {g.user}")
 
 
 @bp.route('/login', methods=['GET', 'POST'])
@@ -56,7 +59,7 @@ def login():
 
         session.clear()
         session['user_id'] = user['id']
-        msg = "User {0} logged.".format(user['id'])
+        msg = "User {0} logged.".format(username)
         return build_json_response(msg, 200, 'auth.login')
          
 

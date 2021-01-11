@@ -6,6 +6,7 @@ sys.path.append(
     )
 )
 
+import sqlite3
 # The repository Layer interacts with the Domain Model.
 from models.post_model import Post
 
@@ -16,38 +17,58 @@ class SQLiteRepository:
     def __init__(self, session):
         self._session = session
         self._cursor = session.cursor()
-
-    def insert(self, new_post):
-        new_post = Post(new_post['author_id'], new_post['title'], new_post['body']).post
-        self._cursor.execute("INSERT INTO post(AUTHOR_ID, TITLE, BODY) VALUES(?,?,?)", (new_post['author_id'], new_post['title'], new_post['body']))
     
-    def get_all(self) -> []:
-
-        return self._cursor.execute("SELECT p.id, title, body, created, author_id, username"
+    def get_all(self):
+        return self._cursor.execute("SELECT p.id, title, body, username, created, author_id"
                              " FROM post p JOIN user u ON p.author_id = u.id"
                              " ORDER BY created DESC").fetchall()
     
-    def get_by_id(self, id: int) -> dict:
-        post = self._cursor.execute("SELECT * FROM post WHERE author_id=?", (id,)).fetchone()
-        if post:
-            post = Post(author_id=post[1], title=post[3], body=post[4]).post
-            return post
+    def get_posts_by_id(self, author_id):
+        posts = self._cursor.execute("""
+        SELECT author_id, username, title, body FROM post p JOIN user u ON p.author_id = u.id WHERE p.author_id=?
+        """, (author_id,)).fetchall()
+        if posts:
+            posts = [Post(author_id=post[0], author=post[1], title=post[2], body=post[3]).post for post in posts]
+            return posts
+        return None
+    
+    def get_posts_by_username(self, username: str) -> []:
+        posts = self._cursor.execute(
+            """ SELECT author_id, username, title, body FROM post p JOIN user u ON p.author_id = u.id WHERE u.username=?""", (username,)
+        ).fetchall()
+        if posts:
+            posts = [Post(author_id=post[0], author=post[1], title=post[2], body=post[3]).post for post in posts]
+            return posts
         return False
 
+    def insert(self, post):
+        author_id = post['author_id']
+        title = post['title']
+        body = post['body']
+        self._cursor.execute("PRAGMA foreign_keys = 1")
+        try:
+            self._cursor.execute("insert into post (author_id, title, body) values(?,?,?)", (author_id, title, body))
+            return None
+        except sqlite3.IntegrityError as e:
+            return e
+
+    
     def update(self, id: int, req: dict):
-        post = self.get_by_id(id)
-        if post:
+        posts = self.get_posts_by_id(id)
+        if posts:
             if req['body']:
                 self._cursor.execute(""" UPDATE post SET body=?, edit=? WHERE author_id=? """, (req['body'], 1, id))
             if req['title']:
-                self._cursor.execute(""" UPDATE post SET title=?, edit=? WHERE id=? """, (req['title'], 1, id))
+                self._cursor.execute(""" UPDATE post SET title=?, edit=? WHERE author_id=? """, (req['title'], 1, id))
             return True
         return False
     
     def delete(self, id: int):
-        post = self.get_by_id(id)
+        post = self.get_posts_by_id(id)
         if post:
-            self._cursor.execute("DELETE FROM post WHERE author_id=?", (id,))
+            self._cursor.execute("DELETE FROM post WHERE id=?", (id,))
             return True
         return False
+    
+
 

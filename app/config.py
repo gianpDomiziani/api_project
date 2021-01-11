@@ -3,7 +3,7 @@
 default_config = {
     "app_name": "api_project",
     "version": "0.1",
-    "app_debug": False,
+    "app_debug": True,
     "DATABASE": "instance/app.sqlite",
     "DBSchema": "schema.sql",
     "dev_port": 8080
