@@ -61,6 +61,9 @@ def login():
         session['user_id'] = user['id']
         msg = "User {0} logged.".format(username)
         return build_json_response(msg, 200, 'auth.login')
+    elif request.method == 'GET':
+        error = "Method not allowed. (POST)"
+        return build_error_response(error, 'auth.login')
          
 
 
@@ -91,4 +94,10 @@ def register():
 
 @bp.route('/logout')
 def logout():
-    session.clear()
+    logger.debug(f"logout method called.")
+    user_id = session.pop('user_id', None)
+    logger.debug(f"status author_id -> {user_id}")
+    if user_id:
+        return build_json_response({'message': f'user {user_id} is logout'}, 200, 'auth.logout')
+    return build_error_response('no user logged in.', 'auth.logout')
+    

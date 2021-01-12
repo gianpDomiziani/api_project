@@ -19,25 +19,31 @@ class SQLiteRepository:
         self._cursor = session.cursor()
     
     def get_all(self):
-        return self._cursor.execute("SELECT p.id, title, body, username, created, author_id"
+        posts_ = self._cursor.execute("SELECT p.id, author_id, username, title, body, created"
                              " FROM post p JOIN user u ON p.author_id = u.id"
                              " ORDER BY created DESC").fetchall()
+
+        posts_ls = [Post(id_=p[0], author_id=p[1], author=p[2], 
+                     title=p[3], body=p[4], created=str(p[5])).post for p in posts_]
+        return posts_ls
     
-    def get_posts_by_id(self, author_id):
-        posts = self._cursor.execute("""
-        SELECT author_id, username, title, body FROM post p JOIN user u ON p.author_id = u.id WHERE p.author_id=?
-        """, (author_id,)).fetchall()
-        if posts:
-            posts = [Post(author_id=post[0], author=post[1], title=post[2], body=post[3]).post for post in posts]
-            return posts
+    def get_post_by_id(self, id):
+        post_ = self._cursor.execute("""
+        SELECT p.id, author_id, username, title, body, created FROM post p JOIN user u ON p.author_id = u.id WHERE p.id = ?
+        """, (id,)).fetchone()
+        if post_:
+            post = Post(id_=post_[0], author_id=post_[1], author=post_[2], 
+                     title=post_[3], body=post_[4], created=str(post_[5])).post
+            return post
         return None
     
     def get_posts_by_username(self, username: str) -> []:
-        posts = self._cursor.execute(
-            """ SELECT author_id, username, title, body FROM post p JOIN user u ON p.author_id = u.id WHERE u.username=?""", (username,)
+        posts_ = self._cursor.execute(
+            """ SELECT p.id, author_id, username, title, body, created FROM post p JOIN user u ON p.author_id = u.id WHERE u.username=?""", (username,)
         ).fetchall()
-        if posts:
-            posts = [Post(author_id=post[0], author=post[1], title=post[2], body=post[3]).post for post in posts]
+        if posts_:
+            posts = [Post(id_=p[0], author_id=p[1], author=p[2], 
+                     title=p[3], body=p[4], created=str(p[5])).post for p in posts_]
             return posts
         return False
 
@@ -50,23 +56,34 @@ class SQLiteRepository:
             self._cursor.execute("insert into post (author_id, title, body) values(?,?,?)", (author_id, title, body))
             return None
         except sqlite3.IntegrityError as e:
-            return e
+            return str(e)
 
     
-    def update(self, id: int, req: dict):
-        posts = self.get_posts_by_id(id)
-        if posts:
-            if req['body']:
-                self._cursor.execute(""" UPDATE post SET body=?, edit=? WHERE author_id=? """, (req['body'], 1, id))
-            if req['title']:
-                self._cursor.execute(""" UPDATE post SET title=?, edit=? WHERE author_id=? """, (req['title'], 1, id))
-            return True
-        return False
-    
-    def delete(self, id: int):
-        post = self.get_posts_by_id(id)
+    def update(self, author_id: int, id: int, req: dict):
+        """ UPDATE: update a post if the request comes from the owner of the post to be modified.
+        author_id: int -> the identified of the request user;
+        id: int -> post id to be modified.
+        req: dict -> The title and/or body with the modified contents.
+         """
+        
+        post = self.get_post_by_id(id)
         if post:
-            self._cursor.execute("DELETE FROM post WHERE id=?", (id,))
+            if req['body']:
+                self._cursor.execute(""" 
+                UPDATE post SET body=?, edit=? WHERE author_id=? AND id=? """, (req['body'], 1, author_id, id)
+                )
+            if req['title']:
+                self._cursor.execute(""" 
+                UPDATE post SET title=?, edit=? WHERE author_id=? AND id=? """, (req['title'], 1, author_id, id)
+                )
+            # the correctness of the request has been already verified in the service layer.
+            return True 
+        return False 
+        
+    def delete(self, author_id: int, id: int):
+        post = self.get_post_by_id(id)
+        if post:
+            self._cursor.execute("DELETE FROM post WHERE id=? AND author_id=?", (id, author_id)).fetchone()
             return True
         return False
     

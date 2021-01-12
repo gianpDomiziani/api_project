@@ -44,8 +44,8 @@ class TestRepositoryLayer:
         
         false_id = 829
         true_id = 1
-        true_post = post_model.Post(true_id, user1, 'New Title', 'New Body').post
-        false_post = post_model.Post(false_id, user1, 'New titleFALSE', 'New BodyFALSE').post
+        true_post = post_model.Post().new_post(true_id,'New Title', 'New Body')
+        false_post = post_model.Post().new_post(false_id,'New titleFALSE', 'New BodyFALSE')
         with dbhandler(db_path) as session:
             repo = post_repository.SQLiteRepository(session)
             err1 = repo.insert(true_post)
@@ -61,15 +61,14 @@ class TestRepositoryLayer:
         assert expected_false is None, 'Repo should add only post associated with a registered user.'
     
     @staticmethod
-    def test_repo_get_posts_by_id():
+    def test_repo_get_post_by_id():
         id = 1
         with dbhandler(db_path) as session:
             repo = post_repository.SQLiteRepository(session)
-            posts_ = repo.get_posts_by_id(id)
-            posts = [post_model.Post(post_['author_id'], post_['title'], post_['body']).post for post_ in posts_]
-            posts1 = repo.get_posts_by_id('NAN')
-        assert len(posts) > 0
-        assert posts1 is None, 'id should be a int && id should be present in DB.'
+            post = repo.get_post_by_id(id)
+            post1 = repo.get_post_by_id('NAN')
+        assert len(post) == 6, 'get_post_by_id should return a single Post dict coming from a Post object with 6 attributes (keys).'
+        assert post1 is None, 'id should be a int && id should be present in DB.'
     
     @staticmethod
     def test_repo_get_posts_by_username():
@@ -85,28 +84,35 @@ class TestRepositoryLayer:
     @staticmethod
     def test_repo_can_update():
         up = {'title': 'updated title', 'body': 'updated body'}
-        true_id = 1
-        false_id = 58
+        true_author_id = 1
+        true_post_id = 1
+        false_author_id = 58
+        false_post_id = 58
         with dbhandler(db_path) as session:
             repo = post_repository.SQLiteRepository(session)
-            state_true = repo.update(true_id, up)
-            state_false = repo.update(false_id, up)
+            state_true = repo.update(true_author_id, true_post_id, up)
+            state_false = repo.update(false_author_id, false_post_id, up)
             session.commit()
-            updated_posts = repo.get_posts_by_id(true_id)
+            updated_post = repo.get_post_by_id(true_post_id)
         assert state_true == True, 'Repo update should update a saved post.'
         assert state_false == False, 'Repo should not update a not present post.'
-        assert updated_posts[0]['title'] == up['title']
-        assert updated_posts[0]['body'] == up['body']
+        assert updated_post['title'] == up['title']
+        assert updated_post['body'] == up['body']
     
     
     @staticmethod
     def test_repo_can_delete():
         with dbhandler(db_path) as session:
+            true_post_id = 1
+            false_post_id = 78
+            true_author_id = 1
             repo = post_repository.SQLiteRepository(session)
-            repo.delete(0)
+            false_status = repo.delete(true_author_id, false_post_id)
+            true_status = repo.delete(true_author_id, true_post_id)
             session.commit()
+            changes = session.total_changes
             cur = session.cursor()
-            expected1 = cur.execute(" SELECT * FROM post WHERE author_id=?", (0,)).fetchone()
-            status = repo.delete('kl')
-        assert expected1 == None
-        assert status == False, 'id should be a int && id should be present in DB.'
+
+        assert not false_status
+        assert true_status
+        assert changes == 1
