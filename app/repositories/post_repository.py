@@ -51,6 +51,7 @@ class SQLiteRepository:
         author_id = post['author_id']
         title = post['title']
         body = post['body']
+        
         self._cursor.execute("PRAGMA foreign_keys = 1")
         try:
             self._cursor.execute("insert into post (author_id, title, body) values(?,?,?)", (author_id, title, body))
