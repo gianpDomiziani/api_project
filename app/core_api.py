@@ -49,7 +49,7 @@ def get_posts_by_username(username):
     posts = repo.get_posts_by_username(username)
     if posts:
         return build_json_response(posts, 200, 'API.get_post_by_id')
-    e = 'There are no posts for the username {username}.'
+    e = f'There are no posts for the username {username}.'
     return build_error_response(e, 'API.get_post_by_id')
 
 @bp.route('/insert', methods=['POST'])
