@@ -7,27 +7,25 @@ sys.path.append(
     )
 )
 
-from models import page_model
+from app.models import post_model
 
-pgs_0 = page_model.Page(id=0, title='Mars', header='Can Mars hold life?',
-             author='Pino', body='Yes.')
-pgs_1 = page_model.Page(id=1)
-
+post0 = post_model.Post(id_=0, author_id=0, author='user1', title='title1', body='body1.').post
+post1 = post_model.Post(id_=1, author_id=1, author='user2', title='title2', body='body2').post
 
 
 class TestModel:
 
     @staticmethod
-    def test_page():
-        assert pgs_0.id == 0
-        assert pgs_1.id == 1
-        assert isinstance(pgs_0.page, dict)
-        assert len(pgs_0.page.keys()) == 5
-        assert len(pgs_1.page.keys()) == 5
-        assert type(pgs_0.page['body']) == str
+    def test_post():
+        assert post0['id_'] == 0
+        assert post1['id_'] == 1
+        assert isinstance(post1, dict)
+        assert len(post0.keys()) == 6
+        assert len(post1.keys()) == 6
+        assert type(post1['body']) == str
 
     @staticmethod
-    def test_pages_are_unique_by_id():
-        pgs_a = page_model.Page(id=12, title='Luna')
-        pgs_b = page_model.Page(id=13, title='Luna')
-        assert pgs_a != pgs_b
+    def test_posts_are_unique_by_id():
+        post_a = post_model.Post(id_=12, title='Luna')
+        post_b = post_model.Post(id_=13, title='Luna')
+        assert post_a != post_b

@@ -5,17 +5,18 @@ from uuid import uuid4
 import init_path
 
 from db.db_utils import dbhandler
+db_path = '../instance/app.sqlite'
 
 from app.repositories import auth_repository
 
 fake_user = {'username': 'fake_usr', 'password': 'fake_psw'}
-true_user = {'username': 'Gianni', 'password': '1234'}
+true_user = {'username': 'user1', 'password': 'pwd1'}
 
 class TestAuthRepo:
 
     @staticmethod
     def test_get_user():
-        with dbhandler() as session:
+        with dbhandler(db_path) as session:
             repo = auth_repository.SQLiteRepository(session)
             cur = session.cursor()
 
@@ -32,9 +33,9 @@ class TestAuthRepo:
     @staticmethod
     def test_get_id_from_user():
         
-        true_username = 'Gianni'
+        true_username = 'user1'
         false_username = 'NAN'
-        with dbhandler() as session:
+        with dbhandler(db_path) as session:
             repo = auth_repository.SQLiteRepository(session)
             cur = session.cursor()
             true_usr_id = repo.get_id_from_user(true_username)
@@ -49,7 +50,7 @@ class TestAuthRepo:
         
         true_id = 1
         false_id = 'NAN'
-        with dbhandler() as session:
+        with dbhandler(db_path) as session:
             repo = auth_repository.SQLiteRepository(session)
             cur = session.cursor()
 
@@ -65,7 +66,7 @@ class TestAuthRepo:
     @staticmethod
     def test_new_user():
         new_user = {'username': f'test{str(uuid4())}', 'password': 'test1'}
-        with dbhandler() as session:
+        with dbhandler(db_path) as session:
             repo = auth_repository.SQLiteRepository(session)
             cur = session.cursor()
             repo.new_user(new_user['username'], new_user['password'])
