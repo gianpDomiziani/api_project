@@ -13,15 +13,14 @@ from flask import (
     Blueprint, g, request, session
 )
 
-
 from app.repositories import post_repository
 from app.models import post_model
 from app.auth import login_required
-from app.models import post_model
 from app.db import get_db
 
 
 bp = Blueprint('core_api', __name__, url_prefix='/api')
+
 
 @bp.route('/posts')
 def get_posts():
@@ -104,8 +103,8 @@ def update(id):
     e = 'No data in request.'   
     return build_error_response(e, 'update')
     
-    
-@bp.route('/delete/<id>')
+    @bp.route('/delete/<id>')
+
 @login_required
 def delete(id):
     log_index = 'Core_api.delete>'
@@ -120,5 +119,3 @@ def delete(id):
             return build_json_response(f'page with id={id} removed', 200, 'delete')
         return build_error_response(f"{g.user[1]} can't delete post {id}", 'delete')
     return build_error_response(f"Post with id={id} is not present.", 'delete')
-
-    
